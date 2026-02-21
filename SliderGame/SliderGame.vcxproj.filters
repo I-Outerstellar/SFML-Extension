@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\System">
+      <UniqueIdentifier>{c8a6538b-8acc-4dd7-9876-fcef6941bf22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Scenes">
+      <UniqueIdentifier>{21ac7a16-df48-4416-9a4e-41310468b384}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\System">
+      <UniqueIdentifier>{5a57fae6-7afb-498f-91ee-9ff057d646dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scenes">
+      <UniqueIdentifier>{5c0a7cbd-1c5b-4d0b-acfd-7e6c8b90c871}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SystemObjects">
+      <UniqueIdentifier>{407cb634-4f6e-42b9-b9ed-30f7d3bc62e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\System\DoNotTouch">
+      <UniqueIdentifier>{191d34b0-a69f-4a08-bfd9-c594e83176a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SystemObjects\DoNotTouch">
+      <UniqueIdentifier>{3c89b597-5dbb-4d74-9b5f-809b0b5a09e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\System\DoNotTouch">
+      <UniqueIdentifier>{67afe377-c5a1-4ff1-aa17-3a1f01a187c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SystemObjects\Buttons">
+      <UniqueIdentifier>{54674764-fe76-41bd-8cc2-659d00fd392b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SystemObjects">
+      <UniqueIdentifier>{d02fccb8-e038-4997-9f7d-4a8f852a3eef}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StateHandler.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="DisplayHandler.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="EventHandler.cpp">
+      <Filter>Source Files\System\DoNotTouch</Filter>
+    </ClCompile>
+    <ClCompile Include="GameWindow.cpp">
+      <Filter>Source Files\System\DoNotTouch</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectStorage.cpp">
+      <Filter>Source Files\System\DoNotTouch</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameWindow.hpp">
+      <Filter>Header Files\System\DoNotTouch</Filter>
+    </ClInclude>
+    <ClInclude Include="GameDrawable.hpp">
+      <Filter>Header Files\SystemObjects\DoNotTouch</Filter>
+    </ClInclude>
+    <ClInclude Include="GameButton.hpp">
+      <Filter>Header Files\SystemObjects\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="TextButton.hpp">
+      <Filter>Header Files\SystemObjects\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="DisplayHandler.hpp">
+      <Filter>Header Files\System\DoNotTouch</Filter>
+    </ClInclude>
+    <ClInclude Include="EventHandler.hpp">
+      <Filter>Header Files\System\DoNotTouch</Filter>
+    </ClInclude>
+    <ClInclude Include="StateHandler.hpp">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectStorage.hpp">
+      <Filter>Header Files\System\DoNotTouch</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
