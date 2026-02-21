@@ -5,7 +5,7 @@
 #include <vector>
 #include <memory>
 #include "GameButton.hpp"
-#include "ObjectStorage.hpp"
+#include "ObjStorageData.hpp"
 
 namespace EventFunctions {
     void upPressEvent(), downPressEvent(), leftPressEvent(), rightPressEvent(), clickPressEvent(), enterPressEvent(), escPressEvent();

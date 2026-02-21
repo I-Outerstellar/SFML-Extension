@@ -133,17 +133,21 @@
   <ItemGroup>
     <ClCompile Include="DisplayControl.cpp" />
     <ClCompile Include="EventControl.cpp" />
+    <ClCompile Include="GameButton.cpp" />
     <ClCompile Include="ObjectStorage.cpp" />
+    <ClCompile Include="ObjStorageControl.cpp" />
     <ClCompile Include="StateData.cpp" />
     <ClCompile Include="StateControl.cpp" />
     <ClCompile Include="GameWindow.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="TextButton.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ObjectStorage.hpp" />
+    <ClInclude Include="ObjStorageData.hpp" />
     <ClInclude Include="GameButton.hpp" />
     <ClInclude Include="DisplayControl.hpp" />
     <ClInclude Include="GameDrawable.hpp" />
+    <ClInclude Include="ObjStorageControl.hpp" />
     <ClInclude Include="StateData.hpp" />
     <ClInclude Include="StateControl.hpp" />
     <ClInclude Include="GameWindow.hpp" />

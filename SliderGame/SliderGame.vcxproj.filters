@@ -72,6 +72,15 @@
     <ClCompile Include="ObjectStorage.cpp">
       <Filter>Source Files\System\Data</Filter>
     </ClCompile>
+    <ClCompile Include="ObjStorageControl.cpp">
+      <Filter>Source Files\System\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="GameButton.cpp">
+      <Filter>Source Files\SystemObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="TextButton.cpp">
+      <Filter>Source Files\SystemObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameDrawable.hpp">
@@ -95,10 +104,13 @@
     <ClInclude Include="GameWindow.hpp">
       <Filter>Header Files\System\Data</Filter>
     </ClInclude>
-    <ClInclude Include="ObjectStorage.hpp">
+    <ClInclude Include="ObjStorageData.hpp">
       <Filter>Header Files\System\Data</Filter>
     </ClInclude>
     <ClInclude Include="EventControl.hpp">
+      <Filter>Header Files\System\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjStorageControl.hpp">
       <Filter>Header Files\System\Control</Filter>
     </ClInclude>
   </ItemGroup>

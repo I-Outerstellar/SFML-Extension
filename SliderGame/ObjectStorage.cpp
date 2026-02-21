@@ -1,3 +1,3 @@
-#include "ObjectStorage.hpp"
+#include "ObjStorageData.hpp"
 
-std::vector<std::shared_ptr<GameButton>> ObjectStorage::buttons{};
+std::unordered_set<std::shared_ptr<GameButton>> ObjectStorage::buttons{};
