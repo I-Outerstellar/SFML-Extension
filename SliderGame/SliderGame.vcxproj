@@ -131,21 +131,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DisplayHandler.cpp" />
-    <ClCompile Include="EventHandler.cpp" />
+    <ClCompile Include="DisplayControl.cpp" />
+    <ClCompile Include="EventControl.cpp" />
     <ClCompile Include="ObjectStorage.cpp" />
-    <ClCompile Include="StateHandler.cpp" />
+    <ClCompile Include="StateData.cpp" />
+    <ClCompile Include="StateControl.cpp" />
     <ClCompile Include="GameWindow.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ObjectStorage.hpp" />
     <ClInclude Include="GameButton.hpp" />
-    <ClInclude Include="DisplayHandler.hpp" />
+    <ClInclude Include="DisplayControl.hpp" />
     <ClInclude Include="GameDrawable.hpp" />
-    <ClInclude Include="StateHandler.hpp" />
+    <ClInclude Include="StateData.hpp" />
+    <ClInclude Include="StateControl.hpp" />
     <ClInclude Include="GameWindow.hpp" />
-    <ClInclude Include="EventHandler.hpp" />
+    <ClInclude Include="EventControl.hpp" />
     <ClInclude Include="TextButton.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "GameWindow.hpp"
-#include "EventHandler.hpp"
-#include "DisplayHandler.hpp"
+#include "EventControl.hpp"
+#include "DisplayControl.hpp"
 #include <iostream>
 
 int main()
@@ -10,7 +10,7 @@ int main()
 
     while (window.isOpen())
     {
-        window.handleEvents(onKeyPressed, onKeyReleased, onClick, onClickRelease);
-        DisplayHandler::draw();
+        window.handleEvents(EventListeners::onKeyPressed, EventListeners::onKeyReleased, EventListeners::onClick, EventListeners::onClickRelease);
+        DisplayControl::draw();
     }
 }

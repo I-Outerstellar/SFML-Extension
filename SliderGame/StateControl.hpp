@@ -1,29 +1,20 @@
 #pragma once
+#include "StateData.hpp"
 
-namespace GameState {
-	namespace Enums {
-		enum class Keys : int {
-			UP, DOWN, LEFT, RIGHT,
-			W, A, S, D,
-			ENTER, ESC
-		};
-
-		enum class Scenes {
-			STARTMENU, GAME, LEADERBOARD
-		};
-	}
+namespace StateControl {
 
 	namespace Accessors {
-		using namespace Enums;
+		using namespace StateData::Enums;
 		Scenes getGameScene();
 		bool getKeyPressed(Keys key);
 		bool canAcceptInput();
 	}
 	
 	namespace Modifiers {
-		using namespace Enums;
+		using namespace StateData::Enums;
 		void setGameScene(Scenes scene);
 		void setKeyPressed(Keys key, bool state);
 		void disableInputAccepting(unsigned int milliseconds);
 	}
+
 }

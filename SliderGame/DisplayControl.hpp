@@ -1,6 +1,6 @@
 #pragma once
 #include "GameWindow.hpp"
 
-namespace DisplayHandler {
+namespace DisplayControl {
 	void draw();
 }

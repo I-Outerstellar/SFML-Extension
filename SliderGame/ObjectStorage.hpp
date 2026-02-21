@@ -1,6 +1,8 @@
 #pragma once
 #include <vector>
 #include <memory>
-//#include "GameButton.hpp"
+#include "GameButton.hpp"
 
-//extern std::vector<std::shared_ptr<GameButton>> buttons;
+namespace ObjectStorage {
+	extern std::vector<std::shared_ptr<GameButton>> buttons;
+}

@@ -5,7 +5,6 @@
 #include <memory>
 #include "GameWindow.hpp"
 #include "GameDrawable.hpp"
-#include "EventHandler.hpp"
 
 class GameButton : public sf::RectangleShape, public GameDrawable {
 protected:

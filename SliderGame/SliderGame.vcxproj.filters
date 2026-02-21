@@ -28,14 +28,8 @@
     <Filter Include="Header Files\SystemObjects">
       <UniqueIdentifier>{407cb634-4f6e-42b9-b9ed-30f7d3bc62e8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\System\DoNotTouch">
-      <UniqueIdentifier>{191d34b0-a69f-4a08-bfd9-c594e83176a3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\SystemObjects\DoNotTouch">
       <UniqueIdentifier>{3c89b597-5dbb-4d74-9b5f-809b0b5a09e8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\System\DoNotTouch">
-      <UniqueIdentifier>{67afe377-c5a1-4ff1-aa17-3a1f01a187c4}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\SystemObjects\Buttons">
       <UniqueIdentifier>{54674764-fe76-41bd-8cc2-659d00fd392b}</UniqueIdentifier>
@@ -43,31 +37,43 @@
     <Filter Include="Source Files\SystemObjects">
       <UniqueIdentifier>{d02fccb8-e038-4997-9f7d-4a8f852a3eef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\System\Data">
+      <UniqueIdentifier>{9f3f333b-7d44-45a5-90c3-77cc0aaf738c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\System\Data">
+      <UniqueIdentifier>{b05e37e0-5810-4155-9b01-f4d2cf1ab965}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\System\Control">
+      <UniqueIdentifier>{d75b089e-ba86-4e70-b470-bea8cc041818}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\System\Control">
+      <UniqueIdentifier>{cca8adc6-d681-4b39-a586-20b7e8b64b14}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="StateHandler.cpp">
-      <Filter>Source Files\System</Filter>
+    <ClCompile Include="StateData.cpp">
+      <Filter>Source Files\System\Data</Filter>
     </ClCompile>
-    <ClCompile Include="DisplayHandler.cpp">
-      <Filter>Source Files\System</Filter>
+    <ClCompile Include="StateControl.cpp">
+      <Filter>Source Files\System\Control</Filter>
     </ClCompile>
-    <ClCompile Include="EventHandler.cpp">
-      <Filter>Source Files\System\DoNotTouch</Filter>
+    <ClCompile Include="DisplayControl.cpp">
+      <Filter>Source Files\System\Control</Filter>
     </ClCompile>
     <ClCompile Include="GameWindow.cpp">
-      <Filter>Source Files\System\DoNotTouch</Filter>
+      <Filter>Source Files\System\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="EventControl.cpp">
+      <Filter>Source Files\System\Control</Filter>
     </ClCompile>
     <ClCompile Include="ObjectStorage.cpp">
-      <Filter>Source Files\System\DoNotTouch</Filter>
+      <Filter>Source Files\System\Data</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameWindow.hpp">
-      <Filter>Header Files\System\DoNotTouch</Filter>
-    </ClInclude>
     <ClInclude Include="GameDrawable.hpp">
       <Filter>Header Files\SystemObjects\DoNotTouch</Filter>
     </ClInclude>
@@ -77,17 +83,23 @@
     <ClInclude Include="TextButton.hpp">
       <Filter>Header Files\SystemObjects\Buttons</Filter>
     </ClInclude>
-    <ClInclude Include="DisplayHandler.hpp">
-      <Filter>Header Files\System\DoNotTouch</Filter>
+    <ClInclude Include="StateData.hpp">
+      <Filter>Header Files\System\Data</Filter>
     </ClInclude>
-    <ClInclude Include="EventHandler.hpp">
-      <Filter>Header Files\System\DoNotTouch</Filter>
+    <ClInclude Include="StateControl.hpp">
+      <Filter>Header Files\System\Control</Filter>
     </ClInclude>
-    <ClInclude Include="StateHandler.hpp">
-      <Filter>Header Files\System</Filter>
+    <ClInclude Include="DisplayControl.hpp">
+      <Filter>Header Files\System\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="GameWindow.hpp">
+      <Filter>Header Files\System\Data</Filter>
     </ClInclude>
     <ClInclude Include="ObjectStorage.hpp">
-      <Filter>Header Files\System\DoNotTouch</Filter>
+      <Filter>Header Files\System\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="EventControl.hpp">
+      <Filter>Header Files\System\Control</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
