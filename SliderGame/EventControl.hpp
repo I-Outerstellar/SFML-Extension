@@ -44,7 +44,7 @@ namespace EventListeners {
             StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::RIGHT, true);
             rightPressEvent();
         }
-        };
+    };
 
     const auto onKeyReleased = [](const sf::Event::KeyReleased& keyReleased) {
         using namespace sf::Keyboard;
@@ -68,19 +68,19 @@ namespace EventListeners {
             StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::D, false);
             StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::RIGHT, false);
         }
-        };
+    };
 
     const auto onClick = [](const sf::Event::MouseButtonPressed& mouseClick) {
         if (!StateControl::Accessors::canAcceptInput()) return;
         for (auto& b : ObjectStorage::buttons) {
-            b->clickEvent(mouseClick);
+            b->clickEvent();
         }
         clickPressEvent();
         };
 
     const auto onClickRelease = [](const sf::Event::MouseButtonReleased& mouseClickRelease) {
         for (auto& b : ObjectStorage::buttons) {
-            b->clickReleaseEvent(mouseClickRelease);
+            b->clickReleaseEvent();
         }
     };
 }

@@ -13,7 +13,7 @@ std::shared_ptr<GameButton> GameButton::create() {
 	return button;
 }
 
-void GameButton::clickEvent(const sf::Event::MouseButtonPressed& mousePressed) {
+void GameButton::clickEvent() {
 	if (this->pressed || !this->active) return;
 	sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
 	if (!this->getGlobalBounds().contains(mousePos))
@@ -23,7 +23,7 @@ void GameButton::clickEvent(const sf::Event::MouseButtonPressed& mousePressed) {
 		onClick();
 }
 
-void GameButton::clickReleaseEvent(const sf::Event::MouseButtonReleased& mouseReleased) {
+void GameButton::clickReleaseEvent() {
 	if (!this->pressed) return;
 	this->pressed = false;
 	if (onClickRelease != NULL)

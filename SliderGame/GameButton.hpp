@@ -12,15 +12,15 @@ protected:
 
 	GameButton();
 public:
-	bool active = true, invisible = false;
+	bool active = true, visible = true;
 
 	static std::shared_ptr<GameButton> create();
 
 	std::function<void()> onClick, onClickRelease;
 
-	virtual void clickEvent(const sf::Event::MouseButtonPressed& mousePressed);
+	virtual void clickEvent();
 
-	virtual void clickReleaseEvent(const sf::Event::MouseButtonReleased& mouseReleased);
+	virtual void clickReleaseEvent();
 
 	virtual void draw() override;
 };

@@ -49,11 +49,17 @@
     <Filter Include="Source Files\System\Control">
       <UniqueIdentifier>{cca8adc6-d681-4b39-a586-20b7e8b64b14}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\SystemObjects\Shapes">
+      <UniqueIdentifier>{b1acafa8-3c17-427d-ab19-276ddcd9e7f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SystemObjects\Buttons">
+      <UniqueIdentifier>{6828f15b-abb0-4345-b156-426810e12f52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SystemObjects\Shapes">
+      <UniqueIdentifier>{818f425d-e467-4078-ba93-6e28a1939561}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="StateData.cpp">
       <Filter>Source Files\System\Data</Filter>
     </ClCompile>
@@ -69,17 +75,23 @@
     <ClCompile Include="EventControl.cpp">
       <Filter>Source Files\System\Control</Filter>
     </ClCompile>
-    <ClCompile Include="ObjectStorage.cpp">
+    <ClCompile Include="ObjStorageData.cpp">
       <Filter>Source Files\System\Data</Filter>
     </ClCompile>
     <ClCompile Include="ObjStorageControl.cpp">
       <Filter>Source Files\System\Control</Filter>
     </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
     <ClCompile Include="GameButton.cpp">
-      <Filter>Source Files\SystemObjects</Filter>
+      <Filter>Source Files\SystemObjects\Buttons</Filter>
     </ClCompile>
     <ClCompile Include="TextButton.cpp">
-      <Filter>Source Files\SystemObjects</Filter>
+      <Filter>Source Files\SystemObjects\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="GameRectangle.cpp">
+      <Filter>Source Files\SystemObjects\Shapes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +124,12 @@
     </ClInclude>
     <ClInclude Include="ObjStorageControl.hpp">
       <Filter>Header Files\System\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="GameShape.hpp">
+      <Filter>Header Files\SystemObjects\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="GameRectangle.hpp">
+      <Filter>Header Files\SystemObjects\Shapes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
