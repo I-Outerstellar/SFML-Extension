@@ -1,14 +1,14 @@
 #include "GameButton.hpp"
 #include "ObjStorageControl.hpp"
 
-GameButton::GameButton() : RectangleShape() {}
+GameButton::GameButton(unsigned int zIndex) : RectangleShape() { this->zIndex = 0; }
 
-std::shared_ptr<GameButton> GameButton::create() {
+std::shared_ptr<GameButton> GameButton::create(unsigned int zIndex) {
 	struct GameButtonAccess : public GameButton {
-		GameButtonAccess() : GameButton() {}
+		GameButtonAccess(unsigned int zIndex) : GameButton(zIndex) {}
 	};
 
-	std::shared_ptr<GameButton> button = std::make_shared<GameButtonAccess>();
+	std::shared_ptr<GameButton> button = std::make_shared<GameButtonAccess>(zIndex);
 	ObjectStorageControl::addButton(button);
 	return button;
 }

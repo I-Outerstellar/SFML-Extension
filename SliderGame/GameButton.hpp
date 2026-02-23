@@ -10,17 +10,21 @@ class GameButton : public sf::RectangleShape, public GameDrawable {
 protected:
 	bool pressed = false;
 
-	GameButton();
+	GameButton(unsigned int zIndex);
 public:
 	bool active = true, visible = true;
 
-	static std::shared_ptr<GameButton> create();
+	static std::shared_ptr<GameButton> create(unsigned int zIndex = 0);
 
 	std::function<void()> onClick, onClickRelease;
+
+	bool isPressed() { return this->pressed; };
 
 	virtual void clickEvent();
 
 	virtual void clickReleaseEvent();
 
 	virtual void draw() override;
+
+	virtual ~GameButton() = default;
 };

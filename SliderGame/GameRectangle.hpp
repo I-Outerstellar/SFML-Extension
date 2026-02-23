@@ -1,14 +1,15 @@
+#pragma once
 #include "GameShape.hpp"
 #include <memory>
 
 class GameRectangle : public GameShape, public sf::RectangleShape {
 protected:
-	GameRectangle() {}
+	GameRectangle(unsigned int zIndex) { this->zIndex = zIndex; }
 public:
-	bool visible = true;
-
-	static std::shared_ptr<GameRectangle> create();
+	static std::shared_ptr<GameRectangle> create(unsigned int zIndex = 0);
 
 	virtual bool intersects(sf::Shape& shape) override;
 	virtual void draw() override;
+
+	virtual ~GameRectangle() = default;
 };

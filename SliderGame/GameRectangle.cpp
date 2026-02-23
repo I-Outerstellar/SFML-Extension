@@ -2,12 +2,12 @@
 #include "GameWindow.hpp"
 #include "ObjStorageControl.hpp"
 
-std::shared_ptr<GameRectangle> GameRectangle::create() {
+std::shared_ptr<GameRectangle> GameRectangle::create(unsigned int zIndex) {
 	struct GameRectangleAccess : GameRectangle {
-		GameRectangleAccess() : GameRectangle() {}
+		GameRectangleAccess(unsigned int zIndex) : GameRectangle(zIndex) {}
 	};
 
-	std::shared_ptr<GameShape> rect = std::make_shared<GameRectangleAccess>();
+	std::shared_ptr<GameShape> rect = std::make_shared<GameRectangleAccess>(zIndex);
 	ObjectStorageControl::addShape(rect);
 	return std::static_pointer_cast<GameRectangle>(rect);
 }

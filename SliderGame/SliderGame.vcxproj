@@ -134,6 +134,7 @@
     <ClCompile Include="DisplayControl.cpp" />
     <ClCompile Include="EventControl.cpp" />
     <ClCompile Include="GameButton.cpp" />
+    <ClCompile Include="GameCircle.cpp" />
     <ClCompile Include="ObjStorageData.cpp" />
     <ClCompile Include="ObjStorageControl.cpp" />
     <ClCompile Include="GameRectangle.cpp" />
@@ -141,9 +142,11 @@
     <ClCompile Include="StateControl.cpp" />
     <ClCompile Include="GameWindow.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="TextBox.cpp" />
     <ClCompile Include="TextButton.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GameCircle.hpp" />
     <ClInclude Include="GameShape.hpp" />
     <ClInclude Include="ObjStorageData.hpp" />
     <ClInclude Include="GameButton.hpp" />
@@ -155,6 +158,7 @@
     <ClInclude Include="StateControl.hpp" />
     <ClInclude Include="GameWindow.hpp" />
     <ClInclude Include="EventControl.hpp" />
+    <ClInclude Include="TextBox.hpp" />
     <ClInclude Include="TextButton.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -93,13 +93,16 @@
     <ClCompile Include="GameRectangle.cpp">
       <Filter>Source Files\SystemObjects\Shapes</Filter>
     </ClCompile>
+    <ClCompile Include="GameCircle.cpp">
+      <Filter>Source Files\SystemObjects\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="TextBox.cpp">
+      <Filter>Source Files\SystemObjects\Shapes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameDrawable.hpp">
       <Filter>Header Files\SystemObjects\DoNotTouch</Filter>
-    </ClInclude>
-    <ClInclude Include="GameButton.hpp">
-      <Filter>Header Files\SystemObjects\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="TextButton.hpp">
       <Filter>Header Files\SystemObjects\Buttons</Filter>
@@ -125,11 +128,20 @@
     <ClInclude Include="ObjStorageControl.hpp">
       <Filter>Header Files\System\Control</Filter>
     </ClInclude>
-    <ClInclude Include="GameShape.hpp">
-      <Filter>Header Files\SystemObjects\Shapes</Filter>
-    </ClInclude>
     <ClInclude Include="GameRectangle.hpp">
       <Filter>Header Files\SystemObjects\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="GameShape.hpp">
+      <Filter>Header Files\SystemObjects\DoNotTouch</Filter>
+    </ClInclude>
+    <ClInclude Include="GameCircle.hpp">
+      <Filter>Header Files\SystemObjects\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="GameButton.hpp">
+      <Filter>Header Files\SystemObjects\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBox.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

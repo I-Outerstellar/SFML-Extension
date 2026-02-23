@@ -1,9 +1,9 @@
 #include "TextButton.hpp"
 #include "ObjStorageControl.hpp"
 
-std::shared_ptr<TextButton> TextButton::create(sf::Text text, unsigned int characterSize) {
+std::shared_ptr<TextButton> TextButton::create(sf::Text text, unsigned int zIndex, unsigned int characterSize) {
 	struct TextButtonAccess : public TextButton {
-		TextButtonAccess(sf::Text text, unsigned int characterSize = 30) : TextButton(text, characterSize) {} //Reference to local variable of enclosing function is not allowed
+		TextButtonAccess(sf::Text text, unsigned int characterSize = 30) : TextButton(text, zIndex, characterSize) {} //Reference to local variable of enclosing function is not allowed
 	};
 
 	std::shared_ptr<GameButton> button = std::make_shared<TextButtonAccess>(text, characterSize);
@@ -21,5 +21,5 @@ void TextButton::draw() {
 	unsigned int shiftX = text.getLocalBounds().size.x / 2;
 	unsigned int shiftY = text.getLocalBounds().size.y / 2;
 	text.setPosition(this->getGeometricCenter() - sf::Vector2f(shiftX, shiftY));
-	window.draw(text);
+	window.draw(this->text);
 }
