@@ -12,6 +12,12 @@ std::shared_ptr<GameCircle> GameCircle::create(unsigned int zIndex) {
 	return std::static_pointer_cast<GameCircle>(circle);
 }
 
+void GameCircle::remove(std::shared_ptr<GameCircle>& circle) {
+	std::shared_ptr<GameShape> shapePtr = std::static_pointer_cast<GameShape>(circle);
+	ObjectStorageControl::removeShape(shapePtr);
+	circle.reset();
+}
+
 bool GameCircle::intersects(sf::Shape& shape) {
 	return this->getGlobalBounds().findIntersection(shape.getGlobalBounds()).has_value();
 }

@@ -11,6 +11,12 @@ std::shared_ptr<TextButton> TextButton::create(sf::Text text, unsigned int zInde
 	return std::static_pointer_cast<TextButton>(button);
 }
 
+void TextButton::remove(std::shared_ptr<TextButton>& button) {
+	std::shared_ptr<GameButton> buttonPtr = std::static_pointer_cast<GameButton>(button);
+	ObjectStorageControl::removeButton(buttonPtr);
+	button.reset();
+}
+
 void TextButton::changeText(std::string text) {
 	this->text.setString(text);
 	this->draw();

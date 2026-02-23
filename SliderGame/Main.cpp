@@ -35,6 +35,8 @@ int main()
     circle->setOutlineColor(sf::Color::Black);
     circle->setOutlineThickness(2);
 
+    //GameRectangle::remove(rect);
+
     window.setFramerateLimit(30); //Window is declared globally
 
     while (window.isOpen())

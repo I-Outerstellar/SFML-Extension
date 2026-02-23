@@ -16,6 +16,8 @@ public:
 
 	static std::shared_ptr<GameButton> create(unsigned int zIndex = 0);
 
+	static void remove(std::shared_ptr<GameButton>& button);
+
 	std::function<void()> onClick, onClickRelease;
 
 	bool isPressed() { return this->pressed; };

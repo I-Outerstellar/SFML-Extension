@@ -13,6 +13,12 @@ std::shared_ptr<GameButton> GameButton::create(unsigned int zIndex) {
 	return button;
 }
 
+void GameButton::remove(std::shared_ptr<GameButton>& button) {
+	std::shared_ptr<GameButton> buttonPtr = std::static_pointer_cast<GameButton>(button);
+	ObjectStorageControl::removeButton(buttonPtr);
+	button.reset();
+}
+
 void GameButton::clickEvent() {
 	if (this->pressed || !this->active) return;
 	sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));

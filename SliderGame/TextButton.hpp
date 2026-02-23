@@ -13,6 +13,8 @@ public:
 
 	static std::shared_ptr<TextButton> create(sf::Text text, unsigned int characterSize = 30, unsigned int zIndex = 0);
 
+	static void remove(std::shared_ptr<TextButton>& button);
+
 	void changeText(std::string text);
 
 	virtual void draw() override;

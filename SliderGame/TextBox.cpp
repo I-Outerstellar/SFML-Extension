@@ -12,6 +12,12 @@ std::shared_ptr<TextBox> TextBox::create(sf::Text text, unsigned int characterSi
 	return std::static_pointer_cast<TextBox>(textBox);
 }
 
+void TextBox::remove(std::shared_ptr<TextBox>& textBox) {
+	std::shared_ptr<GameShape> shapePtr = std::static_pointer_cast<GameShape>(textBox);
+	ObjectStorageControl::removeShape(shapePtr);
+	textBox.reset();
+}
+
 void TextBox::changeText(std::string text) {
 	this->text.setString(text);
 	this->draw();
