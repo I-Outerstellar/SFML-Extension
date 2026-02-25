@@ -21,7 +21,7 @@ int main()
     //static std::shared_ptr<GameButton> button = GameButton::create();
     button->onClick = []() {
         wow++;
-        std::cout << wow << " OOMG IT WAS CLICKED\n";
+        button->changeText("BRUH\n" + std::to_string(wow));
         };
     button->changeText("BRUH");
     button->setPosition({0, 0});
