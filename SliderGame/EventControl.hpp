@@ -5,7 +5,8 @@
 #include <vector>
 #include <memory>
 #include "GameButton.hpp"
-#include "ObjStorageData.hpp"
+#include "GameScene.hpp"
+#include "SceneData.hpp"
 
 namespace EventFunctions {
     void upPressEvent(), downPressEvent(), leftPressEvent(), rightPressEvent(), clickPressEvent(), enterPressEvent(), escPressEvent();
@@ -70,18 +71,21 @@ namespace EventListeners {
         }
     };
 
+#pragma warning (push)
+#pragma warning (disable : 4100)
     const auto onClick = [](const sf::Event::MouseButtonPressed& mouseClick) {
         if (!StateControl::Accessors::canAcceptInput()) return;
-        for (auto& b : ObjectStorage::buttons) {
+        for (auto& b : SceneStorage::currentScene.getSceneButtons()) {
             b->clickEvent();
         }
         clickPressEvent();
         };
 
     const auto onClickRelease = [](const sf::Event::MouseButtonReleased& mouseClickRelease) {
-        for (auto& b : ObjectStorage::buttons) {
+        for (auto& b : SceneStorage::currentScene.getSceneButtons()) {
             b->clickReleaseEvent();
         }
     };
+#pragma warning (pop)
 }
 

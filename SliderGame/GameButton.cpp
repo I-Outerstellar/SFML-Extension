@@ -1,5 +1,6 @@
 #include "GameButton.hpp"
-#include "ObjStorageControl.hpp"
+#include "GameScene.hpp"
+#include "SceneData.hpp"
 
 GameButton::GameButton(unsigned int zIndex) : RectangleShape() { this->zIndex = 0; }
 
@@ -9,13 +10,13 @@ std::shared_ptr<GameButton> GameButton::create(unsigned int zIndex) {
 	};
 
 	std::shared_ptr<GameButton> button = std::make_shared<GameButtonAccess>(zIndex);
-	ObjectStorageControl::addButton(button);
+	SceneStorage::currentScene.add(button);
 	return button;
 }
 
 void GameButton::remove(std::shared_ptr<GameButton>& button) {
 	std::shared_ptr<GameButton> buttonPtr = std::static_pointer_cast<GameButton>(button);
-	ObjectStorageControl::removeButton(buttonPtr);
+	SceneStorage::currentScene.remove(buttonPtr);
 	button.reset();
 }
 

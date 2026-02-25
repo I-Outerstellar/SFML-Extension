@@ -1,5 +1,6 @@
 #include "GameCircle.hpp"
-#include "ObjStorageControl.hpp"
+#include "GameScene.hpp"
+#include "SceneData.hpp"
 #include "GameWindow.hpp"
 
 std::shared_ptr<GameCircle> GameCircle::create(unsigned int zIndex) {
@@ -8,13 +9,13 @@ std::shared_ptr<GameCircle> GameCircle::create(unsigned int zIndex) {
 	};
 
 	std::shared_ptr<GameShape> circle = std::make_shared<GameCircleAccess>(zIndex);
-	ObjectStorageControl::addShape(circle);
+	SceneStorage::currentScene.add(circle);
 	return std::static_pointer_cast<GameCircle>(circle);
 }
 
 void GameCircle::remove(std::shared_ptr<GameCircle>& circle) {
 	std::shared_ptr<GameShape> shapePtr = std::static_pointer_cast<GameShape>(circle);
-	ObjectStorageControl::removeShape(shapePtr);
+	SceneStorage::currentScene.remove(shapePtr);
 	circle.reset();
 }
 

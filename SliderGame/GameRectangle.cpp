@@ -1,6 +1,7 @@
 #include "GameRectangle.hpp"
 #include "GameWindow.hpp"
-#include "ObjStorageControl.hpp"
+#include "GameScene.hpp"
+#include "SceneData.hpp"
 
 std::shared_ptr<GameRectangle> GameRectangle::create(unsigned int zIndex) {
 	struct GameRectangleAccess : GameRectangle {
@@ -8,13 +9,13 @@ std::shared_ptr<GameRectangle> GameRectangle::create(unsigned int zIndex) {
 	};
 
 	std::shared_ptr<GameShape> rect = std::make_shared<GameRectangleAccess>(zIndex);
-	ObjectStorageControl::addShape(rect);
+	SceneStorage::currentScene.add(rect);
 	return std::static_pointer_cast<GameRectangle>(rect);
 }
 
 void GameRectangle::remove(std::shared_ptr<GameRectangle>& rect) {
 	std::shared_ptr<GameShape> shapePtr = std::static_pointer_cast<GameShape>(rect);
-	ObjectStorageControl::removeShape(shapePtr);
+	SceneStorage::currentScene.remove(shapePtr);
 	rect.reset();
 }
 

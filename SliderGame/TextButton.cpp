@@ -1,5 +1,6 @@
 #include "TextButton.hpp"
-#include "ObjStorageControl.hpp"
+#include "GameScene.hpp"
+#include "SceneData.hpp"
 
 std::shared_ptr<TextButton> TextButton::create(sf::Text text, unsigned int zIndex, unsigned int characterSize) {
 	struct TextButtonAccess : public TextButton {
@@ -7,13 +8,13 @@ std::shared_ptr<TextButton> TextButton::create(sf::Text text, unsigned int zInde
 	};
 
 	std::shared_ptr<GameButton> button = std::make_shared<TextButtonAccess>(text, characterSize);
-	ObjectStorageControl::addButton(button);
+	SceneStorage::currentScene.add(button);
 	return std::static_pointer_cast<TextButton>(button);
 }
 
 void TextButton::remove(std::shared_ptr<TextButton>& button) {
 	std::shared_ptr<GameButton> buttonPtr = std::static_pointer_cast<GameButton>(button);
-	ObjectStorageControl::removeButton(buttonPtr);
+	SceneStorage::currentScene.remove(buttonPtr);
 	button.reset();
 }
 

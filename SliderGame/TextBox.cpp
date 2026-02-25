@@ -1,5 +1,6 @@
 #include "TextBox.hpp"
-#include "ObjStorageControl.hpp"
+#include "GameScene.hpp"
+#include "SceneData.hpp"
 #include "GameWindow.hpp"
 
 std::shared_ptr<TextBox> TextBox::create(sf::Text text, unsigned int characterSize, unsigned int zIndex) {
@@ -8,13 +9,13 @@ std::shared_ptr<TextBox> TextBox::create(sf::Text text, unsigned int characterSi
 	};
 
 	std::shared_ptr<GameShape> textBox = std::make_shared<TextBoxAccess>(text, zIndex, characterSize);
-	ObjectStorageControl::addShape(textBox);
+	SceneStorage::currentScene.add(textBox);
 	return std::static_pointer_cast<TextBox>(textBox);
 }
 
 void TextBox::remove(std::shared_ptr<TextBox>& textBox) {
 	std::shared_ptr<GameShape> shapePtr = std::static_pointer_cast<GameShape>(textBox);
-	ObjectStorageControl::removeShape(shapePtr);
+	SceneStorage::currentScene.remove(shapePtr);
 	textBox.reset();
 }
 

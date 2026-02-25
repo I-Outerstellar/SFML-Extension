@@ -136,8 +136,8 @@
     <ClCompile Include="GameButton.cpp" />
     <ClCompile Include="GameCircle.cpp" />
     <ClCompile Include="GamePolygon.cpp" />
-    <ClCompile Include="ObjStorageData.cpp" />
-    <ClCompile Include="ObjStorageControl.cpp" />
+    <ClCompile Include="GameScene.cpp" />
+    <ClCompile Include="SceneData.cpp" />
     <ClCompile Include="GameRectangle.cpp" />
     <ClCompile Include="StateData.cpp" />
     <ClCompile Include="StateControl.cpp" />
@@ -149,12 +149,12 @@
   <ItemGroup>
     <ClInclude Include="GameCircle.hpp" />
     <ClInclude Include="GamePolygon.hpp" />
+    <ClInclude Include="GameScene.hpp" />
     <ClInclude Include="GameShape.hpp" />
-    <ClInclude Include="ObjStorageData.hpp" />
+    <ClInclude Include="SceneData.hpp" />
     <ClInclude Include="GameButton.hpp" />
     <ClInclude Include="DisplayControl.hpp" />
     <ClInclude Include="GameDrawable.hpp" />
-    <ClInclude Include="ObjStorageControl.hpp" />
     <ClInclude Include="GameRectangle.hpp" />
     <ClInclude Include="StateData.hpp" />
     <ClInclude Include="StateControl.hpp" />

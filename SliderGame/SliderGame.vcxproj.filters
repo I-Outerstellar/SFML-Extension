@@ -13,141 +13,141 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\System">
+    <Filter Include="Header Files\GameSystem">
       <UniqueIdentifier>{c8a6538b-8acc-4dd7-9876-fcef6941bf22}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Scenes">
-      <UniqueIdentifier>{21ac7a16-df48-4416-9a4e-41310468b384}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\System">
-      <UniqueIdentifier>{5a57fae6-7afb-498f-91ee-9ff057d646dc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Scenes">
-      <UniqueIdentifier>{5c0a7cbd-1c5b-4d0b-acfd-7e6c8b90c871}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\SystemObjects">
-      <UniqueIdentifier>{407cb634-4f6e-42b9-b9ed-30f7d3bc62e8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\SystemObjects\DoNotTouch">
-      <UniqueIdentifier>{3c89b597-5dbb-4d74-9b5f-809b0b5a09e8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\SystemObjects\Buttons">
-      <UniqueIdentifier>{54674764-fe76-41bd-8cc2-659d00fd392b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\SystemObjects">
-      <UniqueIdentifier>{d02fccb8-e038-4997-9f7d-4a8f852a3eef}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\System\Data">
-      <UniqueIdentifier>{9f3f333b-7d44-45a5-90c3-77cc0aaf738c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\System\Data">
+    <Filter Include="Header Files\GameSystem\Data">
       <UniqueIdentifier>{b05e37e0-5810-4155-9b01-f4d2cf1ab965}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\System\Control">
+    <Filter Include="Header Files\GameSystem\Control">
       <UniqueIdentifier>{d75b089e-ba86-4e70-b470-bea8cc041818}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\System\Control">
-      <UniqueIdentifier>{cca8adc6-d681-4b39-a586-20b7e8b64b14}</UniqueIdentifier>
+    <Filter Include="Header Files\GameObjects">
+      <UniqueIdentifier>{407cb634-4f6e-42b9-b9ed-30f7d3bc62e8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\SystemObjects\Shapes">
+    <Filter Include="Header Files\GameObjects\DoNotTouch">
+      <UniqueIdentifier>{3c89b597-5dbb-4d74-9b5f-809b0b5a09e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameObjects\Buttons">
+      <UniqueIdentifier>{54674764-fe76-41bd-8cc2-659d00fd392b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameObjects\Shapes">
       <UniqueIdentifier>{b1acafa8-3c17-427d-ab19-276ddcd9e7f0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\SystemObjects\Buttons">
+    <Filter Include="Source Files\GameSystem">
+      <UniqueIdentifier>{5a57fae6-7afb-498f-91ee-9ff057d646dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameSystem\Data">
+      <UniqueIdentifier>{9f3f333b-7d44-45a5-90c3-77cc0aaf738c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameSystem\Control">
+      <UniqueIdentifier>{cca8adc6-d681-4b39-a586-20b7e8b64b14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObjects">
+      <UniqueIdentifier>{d02fccb8-e038-4997-9f7d-4a8f852a3eef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObjects\Buttons">
       <UniqueIdentifier>{6828f15b-abb0-4345-b156-426810e12f52}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\SystemObjects\Shapes">
+    <Filter Include="Source Files\GameObjects\Shapes">
       <UniqueIdentifier>{818f425d-e467-4078-ba93-6e28a1939561}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObjects\Scene">
+      <UniqueIdentifier>{b6f00353-afef-454f-b273-1ac472b39613}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameObjects\Scene">
+      <UniqueIdentifier>{62d90c44-f0ab-4a4b-a978-690aa097d6cf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StateData.cpp">
-      <Filter>Source Files\System\Data</Filter>
+      <Filter>Source Files\GameSystem\Data</Filter>
     </ClCompile>
     <ClCompile Include="StateControl.cpp">
-      <Filter>Source Files\System\Control</Filter>
+      <Filter>Source Files\GameSystem\Control</Filter>
     </ClCompile>
     <ClCompile Include="DisplayControl.cpp">
-      <Filter>Source Files\System\Control</Filter>
+      <Filter>Source Files\GameSystem\Control</Filter>
     </ClCompile>
     <ClCompile Include="GameWindow.cpp">
-      <Filter>Source Files\System\Data</Filter>
+      <Filter>Source Files\GameSystem\Data</Filter>
     </ClCompile>
     <ClCompile Include="EventControl.cpp">
-      <Filter>Source Files\System\Control</Filter>
+      <Filter>Source Files\GameSystem\Control</Filter>
     </ClCompile>
-    <ClCompile Include="ObjStorageData.cpp">
-      <Filter>Source Files\System\Data</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjStorageControl.cpp">
-      <Filter>Source Files\System\Control</Filter>
+    <ClCompile Include="SceneData.cpp">
+      <Filter>Source Files\GameSystem\Data</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
-      <Filter>Source Files\System</Filter>
+      <Filter>Source Files\GameSystem</Filter>
     </ClCompile>
     <ClCompile Include="GameButton.cpp">
-      <Filter>Source Files\SystemObjects\Buttons</Filter>
+      <Filter>Source Files\GameObjects\Buttons</Filter>
     </ClCompile>
     <ClCompile Include="TextButton.cpp">
-      <Filter>Source Files\SystemObjects\Buttons</Filter>
+      <Filter>Source Files\GameObjects\Buttons</Filter>
     </ClCompile>
     <ClCompile Include="GameRectangle.cpp">
-      <Filter>Source Files\SystemObjects\Shapes</Filter>
+      <Filter>Source Files\GameObjects\Shapes</Filter>
     </ClCompile>
     <ClCompile Include="GameCircle.cpp">
-      <Filter>Source Files\SystemObjects\Shapes</Filter>
+      <Filter>Source Files\GameObjects\Shapes</Filter>
     </ClCompile>
     <ClCompile Include="TextBox.cpp">
-      <Filter>Source Files\SystemObjects\Shapes</Filter>
+      <Filter>Source Files\GameObjects\Shapes</Filter>
     </ClCompile>
     <ClCompile Include="GamePolygon.cpp">
-      <Filter>Source Files\SystemObjects\Shapes</Filter>
+      <Filter>Source Files\GameObjects\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene.cpp">
+      <Filter>Source Files\GameObjects\Scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameDrawable.hpp">
-      <Filter>Header Files\SystemObjects\DoNotTouch</Filter>
+      <Filter>Header Files\GameObjects\DoNotTouch</Filter>
     </ClInclude>
     <ClInclude Include="TextButton.hpp">
-      <Filter>Header Files\SystemObjects\Buttons</Filter>
+      <Filter>Header Files\GameObjects\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="StateData.hpp">
-      <Filter>Header Files\System\Data</Filter>
+      <Filter>Header Files\GameSystem\Data</Filter>
     </ClInclude>
     <ClInclude Include="StateControl.hpp">
-      <Filter>Header Files\System\Control</Filter>
+      <Filter>Header Files\GameSystem\Control</Filter>
     </ClInclude>
     <ClInclude Include="DisplayControl.hpp">
-      <Filter>Header Files\System\Control</Filter>
+      <Filter>Header Files\GameSystem\Control</Filter>
     </ClInclude>
     <ClInclude Include="GameWindow.hpp">
-      <Filter>Header Files\System\Data</Filter>
+      <Filter>Header Files\GameSystem\Data</Filter>
     </ClInclude>
-    <ClInclude Include="ObjStorageData.hpp">
-      <Filter>Header Files\System\Data</Filter>
+    <ClInclude Include="SceneData.hpp">
+      <Filter>Header Files\GameSystem\Data</Filter>
     </ClInclude>
     <ClInclude Include="EventControl.hpp">
-      <Filter>Header Files\System\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjStorageControl.hpp">
-      <Filter>Header Files\System\Control</Filter>
+      <Filter>Header Files\GameSystem\Control</Filter>
     </ClInclude>
     <ClInclude Include="GameRectangle.hpp">
-      <Filter>Header Files\SystemObjects\Shapes</Filter>
+      <Filter>Header Files\GameObjects\Shapes</Filter>
     </ClInclude>
     <ClInclude Include="GameShape.hpp">
-      <Filter>Header Files\SystemObjects\DoNotTouch</Filter>
+      <Filter>Header Files\GameObjects\DoNotTouch</Filter>
     </ClInclude>
     <ClInclude Include="GameCircle.hpp">
-      <Filter>Header Files\SystemObjects\Shapes</Filter>
+      <Filter>Header Files\GameObjects\Shapes</Filter>
     </ClInclude>
     <ClInclude Include="GameButton.hpp">
-      <Filter>Header Files\SystemObjects\Buttons</Filter>
-    </ClInclude>
-    <ClInclude Include="TextBox.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\GameObjects\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="GamePolygon.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\GameObjects\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBox.hpp">
+      <Filter>Header Files\GameObjects\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene.hpp">
+      <Filter>Header Files\GameObjects\Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

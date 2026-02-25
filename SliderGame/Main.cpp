@@ -12,6 +12,10 @@ static int wow = 0;
 
 int main()
 {
+    static GameScene scene;
+    static GameScene scene2;
+    GameScene::switchScene(scene);
+
     static sf::Font font("C:\\Windows\\Fonts\\BKANT.TTF");
     static std::shared_ptr<TextButton> button = TextButton::create(sf::Text(font), 42);
     //static std::shared_ptr<GameButton> button = GameButton::create();
@@ -47,9 +51,9 @@ int main()
     polygon->setFillColor(sf::Color::Green);
     polygon->setOutlineColor(sf::Color::White);
     polygon->setOutlineThickness(5);
-    //polygon->setPosition({500,500});
     polygon->visible = true;
 
+    //GameScene::switchScene(scene2);
 
     //GameRectangle::remove(rect);
 
