@@ -1,12 +1,11 @@
 #include "DisplayControl.hpp"
-#include "TextButton.hpp"
-#include "GameRectangle.hpp"
-#include "GameCircle.hpp"
+#include "GameButton.hpp"
+#include "GameShape.hpp"
 #include "ObjStorageData.hpp"
 #include <memory>
 #include <iostream>
 
-void DisplayControl::draw() {        
+void DisplayControl::draw() {
     window.clear(sf::Color(30, 45, 75));
     for (auto& s : ObjectStorage::shapes) {
         if (s->visible)

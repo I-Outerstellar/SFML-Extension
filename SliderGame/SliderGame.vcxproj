@@ -135,6 +135,7 @@
     <ClCompile Include="EventControl.cpp" />
     <ClCompile Include="GameButton.cpp" />
     <ClCompile Include="GameCircle.cpp" />
+    <ClCompile Include="GamePolygon.cpp" />
     <ClCompile Include="ObjStorageData.cpp" />
     <ClCompile Include="ObjStorageControl.cpp" />
     <ClCompile Include="GameRectangle.cpp" />
@@ -147,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameCircle.hpp" />
+    <ClInclude Include="GamePolygon.hpp" />
     <ClInclude Include="GameShape.hpp" />
     <ClInclude Include="ObjStorageData.hpp" />
     <ClInclude Include="GameButton.hpp" />
