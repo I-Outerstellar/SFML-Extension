@@ -5,7 +5,7 @@
 #include "SceneData.hpp"
 
 void DisplayControl::draw() {
-    window.clear(sf::Color(30, 45, 75));
+    window.clear(SceneStorage::currentScene.backgroundColour);
     for (auto& s : SceneStorage::currentScene.getSceneButtons()) {
         if (s->visible)
             s->draw();

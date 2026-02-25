@@ -2,10 +2,7 @@
 #include "GameWindow.hpp"
 #include "EventControl.hpp"
 #include "DisplayControl.hpp"
-#include "TextButton.hpp"
-#include "GameRectangle.hpp"
-#include "GameCircle.hpp"
-#include "GamePolygon.hpp"
+#include "GameObjects.hpp"
 #include <iostream>
 
 static int wow = 0;
@@ -21,8 +18,9 @@ int main()
     //static std::shared_ptr<GameButton> button = GameButton::create();
     button->onClick = []() {
         wow++;
+        std::cout << std::to_string(wow) << " OMG IT WAS CLICKED\n";
         button->changeText("BRUH\n" + std::to_string(wow));
-        };
+    };
     button->changeText("BRUH");
     button->setPosition({0, 0});
     button->setSize({200, 200});

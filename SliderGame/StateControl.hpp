@@ -3,6 +3,9 @@
 
 namespace StateControl {
 
+	/// <summary>
+	/// Getters/Accessor methods for the current game states
+	/// </summary>
 	namespace Accessors {
 		using namespace StateData::Enums;
 		Scenes getGameScene();
@@ -10,6 +13,9 @@ namespace StateControl {
 		bool canAcceptInput();
 	}
 	
+	/// <summary>
+	/// Setters/Modifiers for the current game states
+	/// </summary>
 	namespace Modifiers {
 		using namespace StateData::Enums;
 		void setGameScene(Scenes scene);

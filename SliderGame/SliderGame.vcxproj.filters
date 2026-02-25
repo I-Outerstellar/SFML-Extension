@@ -58,6 +58,9 @@
     <Filter Include="Header Files\GameObjects\Scene">
       <UniqueIdentifier>{62d90c44-f0ab-4a4b-a978-690aa097d6cf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\IncludeHeaders">
+      <UniqueIdentifier>{9d959843-9e6e-4a5d-8f82-517f49d5e0ca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StateData.cpp">
@@ -148,6 +151,9 @@
     </ClInclude>
     <ClInclude Include="GameScene.hpp">
       <Filter>Header Files\GameObjects\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects.hpp">
+      <Filter>Header Files\IncludeHeaders</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

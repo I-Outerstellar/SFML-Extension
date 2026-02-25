@@ -8,10 +8,16 @@
 #include "GameScene.hpp"
 #include "SceneData.hpp"
 
+/// <summary>
+/// Functions that are called upon reaction to an event
+/// </summary>
 namespace EventFunctions {
     void upPressEvent(), downPressEvent(), leftPressEvent(), rightPressEvent(), clickPressEvent(), enterPressEvent(), escPressEvent();
 }
 
+/// <summary>
+/// The lambda functions required for event listening
+/// </summary>
 namespace EventListeners {
     using namespace EventFunctions;
 

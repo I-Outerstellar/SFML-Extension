@@ -1,6 +1,10 @@
 #pragma once
 #include <atomic>
 
+/*
+	May be due for change
+*/
+
 namespace StateData {
 	namespace Enums {
 		enum class Keys : int {

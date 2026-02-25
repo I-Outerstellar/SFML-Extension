@@ -1,13 +1,24 @@
 #pragma once
+#include <SFML/Graphics/Color.hpp>
 #include <vector>
 #include <memory>
 
 class GameButton;
 class GameShape;
 
+/// <summary>
+/// Class that stores shape and button info as a "Scene"
+/// </summary>
 class GameScene {
 protected:
+	/// <summary>
+	/// Helper method that moves the pushed-to-back button forward in its vector.
+	/// </summary>
 	void moveBackButton();
+
+	/// <summary>
+	/// Helper method that moves the pushed-to-back shape forward in its vector.
+	/// </summary>
 	void moveBackShape();
 	std::vector<std::shared_ptr<GameButton>> sceneButtons{};
 	std::vector<std::shared_ptr<GameShape>> sceneShapes{};
@@ -15,12 +26,47 @@ protected:
 public:
 	GameScene();
 
+	sf::Color backgroundColour = sf::Color(30, 45, 75);
+
+	/// <summary>
+	/// Switches the current scene the window is using.
+	/// </summary>
+	/// <param name="scene"></param>
 	static void switchScene(GameScene& scene);
 
+	/// <summary>
+	/// Returns the vector of scene buttons.
+	/// </summary>
+	/// <returns></returns>
 	std::vector<std::shared_ptr<GameButton>> getSceneButtons();
+
+	/// <summary>
+	/// Returns the vector of scene shapes.
+	/// </summary>
+	/// <returns></returns>
 	std::vector<std::shared_ptr<GameShape>> getSceneShapes();
+
+	/// <summary>
+	/// Adds a button to a scene.
+	/// </summary>
+	/// <param name="button"></param>
 	void add(std::shared_ptr<GameButton>& button);
+
+	/// <summary>
+	/// Adds a shape to a scene.
+	/// </summary>
+	/// <param name="shape"></param>
 	void add(std::shared_ptr<GameShape>& shape);
+
+	/// <summary>
+	/// Removes a button from a scene.
+	/// </summary>
+	/// <param name="button"></param>
 	void remove(std::shared_ptr<GameButton>& button);
+
+	/// <summary>
+	/// Removes a shape from a scene.
+	/// </summary>
+	/// <param name="shape"></param>
 	void remove(std::shared_ptr<GameShape>& shape);
 };
