@@ -38,22 +38,17 @@ int main()
 
     std::shared_ptr<GamePolygon> polygon = GamePolygon::create(1);
 
-    polygon->setPointCount(3);
-    polygon->setPoint(0, { 500, 300 });
+    polygon->setPointCount(4);
+    polygon->setPoint(0, { 500, 500 });
     polygon->setPoint(1, { 600, 400 });
-    //polygon->setPoint(2, { 700, 500 });
-    polygon->setPoint(2, { 600, 600 });
+    polygon->setPoint(2, { 700, 500 });
+    polygon->setPoint(3, { 600, 300 });
 
     polygon->setFillColor(sf::Color::Green);
     polygon->setOutlineColor(sf::Color::White);
     polygon->setOutlineThickness(5);
     //polygon->setPosition({500,500});
     polygon->visible = true;
-
-    std::cout << polygon->getPosition().x << ", "
-        << polygon->getPosition().y << std::endl;
-    std::cout << polygon->getGeometricCenter().x << ", "
-        << polygon->getGeometricCenter().y << std::endl;
 
 
     //GameRectangle::remove(rect);
