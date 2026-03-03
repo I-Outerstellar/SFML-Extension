@@ -17,12 +17,12 @@ namespace GameObjects {
 		/// <summary>
 		/// Helper method that moves the pushed-to-back button forward in its vector.
 		/// </summary>
-		void moveBackButton();
+		const virtual void moveBackButton();
 
 		/// <summary>
 		/// Helper method that moves the pushed-to-back shape forward in its vector.
 		/// </summary>
-		void moveBackShape();
+		const virtual void moveBackShape();
 		std::vector<std::shared_ptr<GameButton>> sceneButtons{};
 		std::vector<std::shared_ptr<GameShape>> sceneShapes{};
 

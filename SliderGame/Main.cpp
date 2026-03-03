@@ -14,6 +14,14 @@ int main()
     static GameScene scene;
     static GameScene scene2;
     SceneControl::switchScene(scene);
+    scene.keyPressFunctions[StateControl::scancodeToInt(sf::Keyboard::Scancode::E)] = []() {
+        SceneControl::switchScene(scene2);
+        scene2.backgroundColour = { static_cast<uint8_t>(rand() % 128), static_cast<uint8_t>(rand() % 128), static_cast<uint8_t>(rand() % 128) };
+        };
+    scene2.keyReleaseFunctions[StateControl::scancodeToInt(sf::Keyboard::Scancode::E)] = []() {
+        SceneControl::switchScene(scene);
+        };
+
 
     static sf::Font font("C:\\Windows\\Fonts\\BKANT.TTF");
     static std::shared_ptr<TextButton> button = TextButton::create(sf::Text(font), 42);
@@ -21,13 +29,6 @@ int main()
         wow++;
         std::cout << std::to_string(wow) << " OMG IT WAS CLICKED\n";
         button->changeText("WOW\n" + std::to_string(wow));
-    };
-    scene.keyPressFunctions[StateControl::scancodeToInt(sf::Keyboard::Scancode::E)] = []() {
-        SceneControl::switchScene(scene2);
-        scene2.backgroundColour = { static_cast<uint8_t>(rand() % 128), static_cast<uint8_t>(rand() % 128), static_cast<uint8_t>(rand() % 128) };
-    };
-    scene2.keyReleaseFunctions[StateControl::scancodeToInt(sf::Keyboard::Scancode::E)] = []() {
-        SceneControl::switchScene(scene);
     };
     button->changeText("WOW");
     button->setPosition({0, 0});
@@ -61,9 +62,7 @@ int main()
 
     scene.add(button).add(rect).add(circle).add(polygon);
     scene2.add(button);
-    //SceneControl::switchScene(scene2);
-
-    //GameRectangle::remove(rect);
+    //scene.remove(circle);
 
     window.setFramerateLimit(30); //Window is declared globally
 

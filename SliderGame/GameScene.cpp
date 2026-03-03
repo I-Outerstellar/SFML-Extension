@@ -13,14 +13,14 @@ GameScene::GameScene() {
 	};
 }
 
-void GameScene::moveBackButton() {
+const void GameScene::moveBackButton() {
 	for (size_t i = this->sceneButtons.size() - 1; i >= 1; i--) {
 		if (this->sceneButtons.at(i - 1)->getZIndex() < this->sceneButtons.at(i)->getZIndex())
 			std::swap(this->sceneButtons.at(i - 1), this->sceneButtons.at(i));
 	}
 }
 
-void GameScene::moveBackShape() {
+const void GameScene::moveBackShape() {
 	for (size_t i = this->sceneShapes.size() - 1; i >= 1; i--) {
 		if (this->sceneShapes.at(i - 1)->getZIndex() < this->sceneShapes.at(i)->getZIndex())
 			std::swap(this->sceneShapes.at(i - 1), this->sceneShapes.at(i));
