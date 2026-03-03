@@ -66,11 +66,5 @@ int main()
 
     window.setFramerateLimit(30); //Window is declared globally
 
-    while (window.isOpen())
-    {
-        window.handleEvents(EventListeners::onKeyPressed, EventListeners::onKeyReleased, 
-            EventListeners::onClick, EventListeners::onClickRelease, EventListeners::windowClosed);
-        
-        SceneControl::draw();
-    }
+    beginWindowLoop();
 }
