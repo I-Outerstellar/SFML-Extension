@@ -161,5 +161,8 @@
     <ClInclude Include="GameButton.hpp">
       <Filter>Header Files\GameObjects\DoNotTouch</Filter>
     </ClInclude>
+    <ClInclude Include="GameControllers.hpp">
+      <Filter>Header Files\IncludeHeaders</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,5 +1,4 @@
 #pragma once
-#include "GameWindow.hpp"
 
 namespace GameObjects {
 	class GameScene;

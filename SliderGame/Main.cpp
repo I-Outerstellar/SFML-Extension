@@ -1,7 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "GameWindow.hpp"
-#include "EventControl.hpp"
-#include "SceneControl.hpp"
+#include "GameControllers.hpp"
 #include "GameObjects.hpp"
 #include <iostream>
 

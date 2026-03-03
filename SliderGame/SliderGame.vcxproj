@@ -148,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameCircle.hpp" />
+    <ClInclude Include="GameControllers.hpp" />
     <ClInclude Include="GameObjects.hpp" />
     <ClInclude Include="GamePolygon.hpp" />
     <ClInclude Include="GameScene.hpp" />

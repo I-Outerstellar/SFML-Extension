@@ -4,10 +4,17 @@
 
 #pragma once
 
-#include "GameDrawable.hpp"
-#include "GameShape.hpp"
+/*Scene*/
+
+#include "GameScene.hpp"
+
+/*Buttons*/
+
 #include "RectangleButton.hpp"
 #include "TextButton.hpp"
+
+/*Shapes*/
+
 #include "GameCircle.hpp"
 #include "GameRectangle.hpp"
 #include "GamePolygon.hpp"
