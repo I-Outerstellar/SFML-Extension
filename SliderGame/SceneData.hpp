@@ -11,5 +11,5 @@ namespace GameObjects {
 /// </summary>
 namespace SceneStorage {
 	extern GameObjects::GameScene defaultScene;
-	extern GameObjects::GameScene* currentScene;
+	extern GameObjects::GameScene* currentScene; //Research: Reference Wrappers in C++
 }

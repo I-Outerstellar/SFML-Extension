@@ -5,34 +5,6 @@
 #include "GameWindow.hpp"
 #include "StateControl.hpp"
 
-void EventFunctions::upPressEvent() {
-
-}
-
-void EventFunctions::downPressEvent() {
-
-}
-
-void EventFunctions::leftPressEvent() {
-
-}
-
-void EventFunctions::rightPressEvent() {
-
-}
-
-void EventFunctions::clickPressEvent() {
-
-}
-
-void EventFunctions::enterPressEvent() {
-
-}
-
-void EventFunctions::escPressEvent() {
-    window.close();
-}
-
 const std::function<void(const sf::Event::Closed& event)> EventListeners::windowClosed = [](const sf::Event::Closed& event) {
     window.close();
 };
@@ -66,7 +38,6 @@ EventListeners::onClick = [](const sf::Event::MouseButtonPressed& mouseClick) {
     for (auto& b : SceneStorage::currentScene->getSceneButtons()) {
         b->clickEvent();
     }
-    EventFunctions::clickPressEvent();
 };
 
 const std::function<void(const sf::Event::MouseButtonReleased& mouseClickRelease)> 

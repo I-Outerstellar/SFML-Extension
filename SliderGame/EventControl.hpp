@@ -5,18 +5,9 @@
 #include <functional>
 
 /// <summary>
-/// Functions that are called upon reaction to an event
-/// </summary>
-namespace EventFunctions {
-    void upPressEvent(), downPressEvent(), leftPressEvent(), rightPressEvent(), clickPressEvent(), enterPressEvent(), escPressEvent();
-}
-
-/// <summary>
 /// The lambda functions required for event listening
 /// </summary>
 namespace EventListeners {
-    using namespace EventFunctions;
-
     extern const std::function<void(const sf::Event::Closed& event)> windowClosed;
     extern const std::function<void(const sf::Event::KeyPressed& keyPressed)> onKeyPressed;
     extern const std::function<void(const sf::Event::KeyReleased& keyPressed)> onKeyReleased;
