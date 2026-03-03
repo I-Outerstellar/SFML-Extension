@@ -14,10 +14,6 @@ static bool& accessKey(Keys key) {
 
 /* ACCESSORS */
 
-Scenes StateControl::Accessors::getGameScene() {
-	return gameScene;
-}
-
 bool StateControl::Accessors::getKeyPressed(Keys key) {
 	return accessKey(key);
 }
@@ -27,10 +23,6 @@ bool StateControl::Accessors::canAcceptInput() {
 }
 
 /* MODIFIERS */
-
-void StateControl::Modifiers::setGameScene(Scenes scene) {
-	gameScene = scene;
-}
 
 void StateControl::Modifiers::setKeyPressed(Keys key, bool state) {
 	accessKey(key) = state;

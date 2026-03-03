@@ -1,10 +1,10 @@
-#include "DisplayControl.hpp"
+#include "SceneControl.hpp"
 #include "GameButton.hpp"
 #include "GameShape.hpp"
 #include "GameScene.hpp"
 #include "SceneData.hpp"
 
-void DisplayControl::draw() {
+void SceneControl::draw() {
     window.clear(SceneStorage::currentScene.backgroundColour);
     for (auto& s : SceneStorage::currentScene.getSceneButtons()) {
         if (s->visible)
@@ -16,4 +16,8 @@ void DisplayControl::draw() {
     }
     window.display();
 
+}
+
+void SceneControl::switchScene(GameScene& scene) {
+    SceneStorage::currentScene = scene;
 }

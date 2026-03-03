@@ -1,7 +1,7 @@
 #pragma once
 
 /// <summary>
-/// Interface for representing drawable game objects.
+/// Implement for representing drawable game objects.
 /// </summary>
 class GameDrawable {
 protected:

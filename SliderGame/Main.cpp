@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "GameWindow.hpp"
 #include "EventControl.hpp"
-#include "DisplayControl.hpp"
+#include "SceneControl.hpp"
 #include "GameObjects.hpp"
 #include <iostream>
 
@@ -11,17 +11,16 @@ int main()
 {
     static GameScene scene;
     static GameScene scene2;
-    GameScene::switchScene(scene);
+    SceneControl::switchScene(scene);
 
     static sf::Font font("C:\\Windows\\Fonts\\BKANT.TTF");
     static std::shared_ptr<TextButton> button = TextButton::create(sf::Text(font), 42);
-    //static std::shared_ptr<GameButton> button = GameButton::create();
     button->onClick = []() {
         wow++;
         std::cout << std::to_string(wow) << " OMG IT WAS CLICKED\n";
-        button->changeText("BRUH\n" + std::to_string(wow));
+        button->changeText("WOW\n" + std::to_string(wow));
     };
-    button->changeText("BRUH");
+    button->changeText("WOW");
     button->setPosition({0, 0});
     button->setSize({200, 200});
     button->setFillColor(sf::Color::Yellow);
@@ -51,7 +50,7 @@ int main()
     polygon->setOutlineThickness(5);
     polygon->visible = true;
 
-    //GameScene::switchScene(scene2);
+    //SceneControl::switchScene(scene2);
 
     //GameRectangle::remove(rect);
 
@@ -60,6 +59,6 @@ int main()
     while (window.isOpen())
     {
         window.handleEvents(EventListeners::onKeyPressed, EventListeners::onKeyReleased, EventListeners::onClick, EventListeners::onClickRelease);
-        DisplayControl::draw();
+        SceneControl::draw();
     }
 }

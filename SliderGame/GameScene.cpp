@@ -28,10 +28,6 @@ std::vector<std::shared_ptr<GameShape>> GameScene::getSceneShapes() {
 	return this->sceneShapes;
 }
 
-void GameScene::switchScene(GameScene& scene) {
-	SceneStorage::currentScene = scene;
-}
-
 void GameScene::add(std::shared_ptr<GameButton>& button) {
 	this->sceneButtons.push_back(button);
 

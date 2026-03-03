@@ -29,12 +29,6 @@ public:
 	sf::Color backgroundColour = sf::Color(30, 45, 75);
 
 	/// <summary>
-	/// Switches the current scene the window is using.
-	/// </summary>
-	/// <param name="scene"></param>
-	static void switchScene(GameScene& scene);
-
-	/// <summary>
 	/// Returns the vector of scene buttons.
 	/// </summary>
 	/// <returns></returns>

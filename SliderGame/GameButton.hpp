@@ -9,27 +9,12 @@
 /// <summary>
 /// A class that represents a rectangular button in the game.
 /// </summary>
-class GameButton : public sf::RectangleShape, public GameDrawable {
+class GameButton : public GameDrawable {
 protected:
 	bool pressed = false;
-
-	GameButton(unsigned int zIndex);
+	
 public:
 	bool active = true;
-
-	/// <summary>
-	/// Static factory method to create a button shared pointer and add it to the current scene.
-	/// </summary>
-	/// <param name="zIndex"></param>
-	/// <returns></returns>
-	static std::shared_ptr<GameButton> create(unsigned int zIndex = 0);
-
-	/// <summary>
-	/// Static method to remove a button shared pointer and add it to the current scene.
-	/// </summary>
-	/// <param name="zIndex"></param>
-	/// <returns></returns>
-	static void remove(std::shared_ptr<GameButton>& button);
 
 	/// <summary>
 	/// Definable method for on click and on click release
@@ -40,22 +25,17 @@ public:
 	/// Returns if the button is pressed.
 	/// </summary>
 	/// <returns></returns>
-	bool isPressed() { return this->pressed; };
+	virtual bool isPressed() { return this->pressed; };
 
 	/// <summary>
 	/// The method required to listen for a click
 	/// </summary>
-	virtual void clickEvent();
+	virtual void clickEvent() = 0;
 
 	/// <summary>
 	/// The method required to listen to a click release
 	/// </summary>
-	virtual void clickReleaseEvent();
-	
-	/// <summary>
-	/// Draws the button.
-	/// </summary>
-	virtual void draw() override;
+	virtual void clickReleaseEvent() = 0;
 
 	virtual ~GameButton() = default;
 };

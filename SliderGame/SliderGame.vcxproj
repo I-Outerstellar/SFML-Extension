@@ -131,9 +131,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DisplayControl.cpp" />
+    <ClCompile Include="SceneControl.cpp" />
     <ClCompile Include="EventControl.cpp" />
-    <ClCompile Include="GameButton.cpp" />
+    <ClCompile Include="RectangleButton.cpp" />
     <ClCompile Include="GameCircle.cpp" />
     <ClCompile Include="GamePolygon.cpp" />
     <ClCompile Include="GameScene.cpp" />
@@ -152,9 +152,10 @@
     <ClInclude Include="GamePolygon.hpp" />
     <ClInclude Include="GameScene.hpp" />
     <ClInclude Include="GameShape.hpp" />
+    <ClInclude Include="RectangleButton.hpp" />
     <ClInclude Include="SceneData.hpp" />
     <ClInclude Include="GameButton.hpp" />
-    <ClInclude Include="DisplayControl.hpp" />
+    <ClInclude Include="SceneControl.hpp" />
     <ClInclude Include="GameDrawable.hpp" />
     <ClInclude Include="GameRectangle.hpp" />
     <ClInclude Include="StateData.hpp" />
@@ -163,6 +164,7 @@
     <ClInclude Include="EventControl.hpp" />
     <ClInclude Include="TextBox.hpp" />
     <ClInclude Include="TextButton.hpp" />
+    <ClInclude Include="TextImplement.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

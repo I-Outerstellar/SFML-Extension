@@ -1,18 +1,20 @@
 #pragma once
+#include "SFML/Graphics/RectangleShape.hpp"
+#include "TextImplement.hpp"
 #include "GameButton.hpp"
 
 /// <summary>
 /// A class that represents a textbox button in the game.
 /// </summary>
-class TextButton : public GameButton {
+class TextButton : public sf::RectangleShape, public TextImplement, public GameButton {
 private:
 	TextButton(sf::Text text, unsigned int zIndex, unsigned int characterSize) :
-		text(text), GameButton(zIndex)
+		TextImplement(text), sf::RectangleShape()
 	{
+		this->zIndex = zIndex;
 		text.setCharacterSize(characterSize);
 	}
 public:
-	sf::Text text;
 
 	/// <summary>
 	/// Static factory method to create a button shared pointer and add it to the current scene.
@@ -30,10 +32,20 @@ public:
 	static void remove(std::shared_ptr<TextButton>& button);
 
 	/// <summary>
+	/// The method required to listen for a click
+	/// </summary>
+	virtual void clickEvent() override;
+
+	/// <summary>
+	/// The method required to listen to a click release
+	/// </summary>
+	virtual void clickReleaseEvent() override;
+
+	/// <summary>
 	/// Change the text of the button.
 	/// </summary>
 	/// <param name="text"></param>
-	void changeText(std::string text);
+	virtual void changeText(std::string text) override;
 
 	/// <summary>
 	/// Draws the button.

@@ -8,7 +8,6 @@ namespace StateControl {
 	/// </summary>
 	namespace Accessors {
 		using namespace StateData::Enums;
-		Scenes getGameScene();
 		bool getKeyPressed(Keys key);
 		bool canAcceptInput();
 	}
@@ -18,7 +17,6 @@ namespace StateControl {
 	/// </summary>
 	namespace Modifiers {
 		using namespace StateData::Enums;
-		void setGameScene(Scenes scene);
 		void setKeyPressed(Keys key, bool state);
 		void disableInputAccepting(unsigned int milliseconds);
 	}

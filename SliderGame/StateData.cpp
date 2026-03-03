@@ -10,4 +10,3 @@ bool keysActivated[] = { //Refer to the enum class for thee associated values
 		false, false
 };
 std::atomic<bool> acceptingInput = true;
-Scenes gameScene = Scenes::STARTMENU;
