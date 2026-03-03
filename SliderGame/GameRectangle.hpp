@@ -19,12 +19,6 @@ namespace GameObjects {
 		static std::shared_ptr<GameRectangle> create(unsigned int zIndex = 0);
 
 		/// <summary>
-		/// Static method that removes a rectangle from the current scene.
-		/// </summary>
-		/// <param name="rect"></param>
-		static void remove(std::shared_ptr<GameRectangle>& rect);
-
-		/// <summary>
 		/// Checks if this shape intersects another shape.
 		/// </summary>
 		/// <param name="shape"></param>

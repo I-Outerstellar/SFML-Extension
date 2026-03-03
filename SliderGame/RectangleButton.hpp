@@ -25,13 +25,6 @@ namespace GameObjects {
 		static std::shared_ptr<RectangleButton> create(unsigned int zIndex = 0);
 
 		/// <summary>
-		/// Static method to remove a button shared pointer and add it to the current scene.
-		/// </summary>
-		/// <param name="zIndex"></param>
-		/// <returns></returns>
-		static void remove(std::shared_ptr<RectangleButton>& button);
-
-		/// <summary>
 		/// The method required to listen for a click
 		/// </summary>
 		virtual void clickEvent() override;

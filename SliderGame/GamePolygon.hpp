@@ -19,12 +19,6 @@ namespace GameObjects {
 		static std::shared_ptr<GamePolygon> create(unsigned int zIndex = 0);
 
 		/// <summary>
-		/// Static method that removes a polygon from the current scene.
-		/// </summary>
-		/// <param name="polygon"></param>
-		static void remove(std::shared_ptr<GamePolygon>& polygon);
-
-		/// <summary>
 		/// Checks if this shape is intersecting another shape.
 		/// </summary>
 		/// <param name="shape"></param>

@@ -7,10 +7,11 @@
 
 using namespace GameObjects;
 
-static int wow = 0;
+int wow = 0;
 
 int main()
 {
+    std::srand(std::time(nullptr));
     static GameScene scene;
     static GameScene scene2;
     SceneControl::switchScene(scene);
@@ -21,6 +22,14 @@ int main()
         wow++;
         std::cout << std::to_string(wow) << " OMG IT WAS CLICKED\n";
         button->changeText("WOW\n" + std::to_string(wow));
+        if (&SceneControl::getCurrentScene() == &scene) {
+            SceneControl::switchScene(scene2);
+        }
+        else {
+            SceneControl::switchScene(scene);
+        }
+        
+        scene2.backgroundColour = { static_cast<uint8_t>(rand() % 128), static_cast<uint8_t>(rand() % 128), static_cast<uint8_t>(rand() % 128) };
     };
     button->changeText("WOW");
     button->setPosition({0, 0});
@@ -52,6 +61,8 @@ int main()
     polygon->setOutlineThickness(5);
     polygon->visible = true;
 
+    scene.add(button).add(rect).add(circle).add(polygon);
+    scene2.add(button);
     //SceneControl::switchScene(scene2);
 
     //GameRectangle::remove(rect);

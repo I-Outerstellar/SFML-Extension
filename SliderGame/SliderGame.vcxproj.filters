@@ -81,9 +81,6 @@
     <ClCompile Include="SceneData.cpp">
       <Filter>Source Files\GameSystem\Data</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files\GameSystem</Filter>
-    </ClCompile>
     <ClCompile Include="TextButton.cpp">
       <Filter>Source Files\GameObjects\Buttons</Filter>
     </ClCompile>
@@ -104,6 +101,9 @@
     </ClCompile>
     <ClCompile Include="RectangleButton.cpp">
       <Filter>Source Files\GameObjects\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -140,9 +140,6 @@
     <ClInclude Include="GameCircle.hpp">
       <Filter>Header Files\GameObjects\Shapes</Filter>
     </ClInclude>
-    <ClInclude Include="GameButton.hpp">
-      <Filter>Header Files\GameObjects\Buttons</Filter>
-    </ClInclude>
     <ClInclude Include="GamePolygon.hpp">
       <Filter>Header Files\GameObjects\Shapes</Filter>
     </ClInclude>
@@ -159,6 +156,9 @@
       <Filter>Header Files\GameObjects\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="TextImplement.hpp">
+      <Filter>Header Files\GameObjects\DoNotTouch</Filter>
+    </ClInclude>
+    <ClInclude Include="GameButton.hpp">
       <Filter>Header Files\GameObjects\DoNotTouch</Filter>
     </ClInclude>
   </ItemGroup>

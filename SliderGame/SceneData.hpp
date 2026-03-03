@@ -10,7 +10,6 @@ namespace GameObjects {
 /// Namespace that holds the currently used scene
 /// </summary>
 namespace SceneStorage {
-
 	extern GameObjects::GameScene defaultScene;
-	extern GameObjects::GameScene& currentScene;
+	extern GameObjects::GameScene* currentScene;
 }

@@ -26,12 +26,6 @@ namespace GameObjects {
 		static std::shared_ptr<TextBox> create(sf::Text text, unsigned int characterSize = 30, unsigned int zIndex = 0);
 
 		/// <summary>
-		/// Static method that removes a text box from the current scene.
-		/// </summary>
-		/// <param name="textBox"></param>
-		static void remove(std::shared_ptr<TextBox>& textBox);
-
-		/// <summary>
 		/// Changes the text of the text box.
 		/// </summary>
 		/// <param name="text"></param>

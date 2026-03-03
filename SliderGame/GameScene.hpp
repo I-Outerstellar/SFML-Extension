@@ -2,6 +2,7 @@
 #include <SFML/Graphics/Color.hpp>
 #include <vector>
 #include <memory>
+#include <functional>
 
 namespace GameObjects {
 
@@ -46,25 +47,25 @@ namespace GameObjects {
 		/// Adds a button to a scene.
 		/// </summary>
 		/// <param name="button"></param>
-		void add(std::shared_ptr<GameButton>& button);
+		GameScene& add(const std::shared_ptr<GameButton>& button);
 
 		/// <summary>
 		/// Adds a shape to a scene.
 		/// </summary>
 		/// <param name="shape"></param>
-		void add(std::shared_ptr<GameShape>& shape);
+		GameScene& add(const std::shared_ptr<GameShape>& shape);
 
 		/// <summary>
 		/// Removes a button from a scene.
 		/// </summary>
 		/// <param name="button"></param>
-		void remove(std::shared_ptr<GameButton>& button);
+		GameScene& remove(const std::shared_ptr<GameButton>& button);
 
 		/// <summary>
 		/// Removes a shape from a scene.
 		/// </summary>
 		/// <param name="shape"></param>
-		void remove(std::shared_ptr<GameShape>& shape);
+		GameScene& remove(const std::shared_ptr<GameShape>& shape);
 	};
 
 }

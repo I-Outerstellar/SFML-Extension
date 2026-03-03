@@ -19,12 +19,6 @@ namespace GameObjects {
 		static std::shared_ptr<GameCircle> create(unsigned int zIndex = 0);
 
 		/// <summary>
-		/// Static method that removes a circle from the current scene.
-		/// </summary>
-		/// <param name="circle"></param>
-		static void remove(std::shared_ptr<GameCircle>& circle);
-
-		/// <summary>
 		/// Returns if this shape and the given shape intersects or not.
 		/// </summary>
 		/// <param name="shape"></param>

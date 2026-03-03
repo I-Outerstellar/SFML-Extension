@@ -13,14 +13,7 @@ std::shared_ptr<RectangleButton> RectangleButton::create(unsigned int zIndex) {
 	};
 
 	std::shared_ptr<GameButton> button = std::make_shared<RectangleButtonAccess>(zIndex);
-	SceneStorage::currentScene.add(button);
 	return std::static_pointer_cast<RectangleButton>(button);
-}
-
-void RectangleButton::remove(std::shared_ptr<RectangleButton>& button) {
-	std::shared_ptr<GameButton> buttonPtr = std::static_pointer_cast<GameButton>(button);
-	SceneStorage::currentScene.remove(buttonPtr);
-	button.reset();
 }
 
 void RectangleButton::clickEvent() {

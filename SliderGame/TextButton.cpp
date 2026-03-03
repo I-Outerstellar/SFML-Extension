@@ -10,14 +10,7 @@ std::shared_ptr<TextButton> TextButton::create(sf::Text text, unsigned int zInde
 	};
 
 	std::shared_ptr<GameButton> button = std::make_shared<TextButtonAccess>(text, zIndex, characterSize);
-	SceneStorage::currentScene.add(button);
 	return std::static_pointer_cast<TextButton>(button);
-}
-
-void TextButton::remove(std::shared_ptr<TextButton>& button) {
-	std::shared_ptr<GameButton> buttonPtr = std::static_pointer_cast<GameButton>(button);
-	SceneStorage::currentScene.remove(buttonPtr);
-	button.reset();
 }
 
 void TextButton::changeText(std::string text) {

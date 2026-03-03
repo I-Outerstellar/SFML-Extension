@@ -15,6 +15,12 @@ namespace SceneControl {
 	void draw();
 
 	/// <summary>
+	/// Returns the current scene being used in a modifiable state
+	/// </summary>
+	/// <returns></returns>
+	GameObjects::GameScene& getCurrentScene();
+
+	/// <summary>
 	/// Change the current GameScene being used
 	/// </summary>
 	/// <param name="gameScene"></param>
