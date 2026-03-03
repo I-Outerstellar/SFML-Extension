@@ -3,6 +3,8 @@
 #include "SceneData.hpp"
 #include "GameWindow.hpp"
 
+using namespace GameObjects;
+
 std::shared_ptr<TextBox> TextBox::create(sf::Text text, unsigned int characterSize, unsigned int zIndex) {
 	struct TextBoxAccess : public TextBox {
 		TextBoxAccess(sf::Text text, unsigned int zIndex, unsigned int characterSize = 30) : TextBox(text, characterSize, zIndex) {} //Reference to local variable of enclosing function is not allowed

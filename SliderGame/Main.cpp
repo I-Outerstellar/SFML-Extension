@@ -5,6 +5,8 @@
 #include "GameObjects.hpp"
 #include <iostream>
 
+using namespace GameObjects;
+
 static int wow = 0;
 
 int main()

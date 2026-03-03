@@ -6,36 +6,40 @@
 #include "GameWindow.hpp"
 #include "GameDrawable.hpp"
 
-/// <summary>
-/// A class that represents a rectangular button in the game.
-/// </summary>
-class GameButton : public GameDrawable {
-protected:
-	bool pressed = false;
-	
-public:
-	bool active = true;
+namespace GameObjects {
 
 	/// <summary>
-	/// Definable method for on click and on click release
+	/// A class that represents a rectangular button in the game.
 	/// </summary>
-	std::function<void()> onClick, onClickRelease;
+	class GameButton : public GameDrawable {
+	protected:
+		bool pressed = false;
 
-	/// <summary>
-	/// Returns if the button is pressed.
-	/// </summary>
-	/// <returns></returns>
-	virtual bool isPressed() { return this->pressed; };
+	public:
+		bool active = true;
 
-	/// <summary>
-	/// The method required to listen for a click
-	/// </summary>
-	virtual void clickEvent() = 0;
+		/// <summary>
+		/// Definable method for on click and on click release
+		/// </summary>
+		std::function<void()> onClick, onClickRelease;
 
-	/// <summary>
-	/// The method required to listen to a click release
-	/// </summary>
-	virtual void clickReleaseEvent() = 0;
+		/// <summary>
+		/// Returns if the button is pressed.
+		/// </summary>
+		/// <returns></returns>
+		virtual bool isPressed() { return this->pressed; };
 
-	virtual ~GameButton() = default;
-};
+		/// <summary>
+		/// The method required to listen for a click
+		/// </summary>
+		virtual void clickEvent() = 0;
+
+		/// <summary>
+		/// The method required to listen to a click release
+		/// </summary>
+		virtual void clickReleaseEvent() = 0;
+
+		virtual ~GameButton() = default;
+	};
+
+}

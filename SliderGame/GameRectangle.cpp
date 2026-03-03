@@ -3,6 +3,8 @@
 #include "GameScene.hpp"
 #include "SceneData.hpp"
 
+using namespace GameObjects;
+
 std::shared_ptr<GameRectangle> GameRectangle::create(unsigned int zIndex) {
 	struct GameRectangleAccess : GameRectangle {
 		GameRectangleAccess(unsigned int zIndex) : GameRectangle(zIndex) {}

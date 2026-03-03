@@ -2,6 +2,8 @@
 #include "GameScene.hpp"
 #include "SceneData.hpp"
 
+using namespace GameObjects;
+
 std::shared_ptr<TextButton> TextButton::create(sf::Text text, unsigned int zIndex, unsigned int characterSize) {
 	struct TextButtonAccess : public TextButton {
 		TextButtonAccess(sf::Text text, unsigned int zIndex, unsigned int characterSize = 30) : TextButton(text, zIndex, characterSize) {} //Reference to local variable of enclosing function is not allowed

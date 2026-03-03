@@ -2,6 +2,8 @@
 #include "GameScene.hpp"
 #include "SceneData.hpp"
 
+using namespace GameObjects;
+
 
 RectangleButton::RectangleButton(unsigned int zIndex) : RectangleShape() { this->zIndex = zIndex; }
 

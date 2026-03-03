@@ -1,7 +1,9 @@
 #pragma once
 #include "GameWindow.hpp"
 
-class GameScene;
+namespace GameObjects {
+	class GameScene;
+}
 
 /// <summary>
 /// The namespace for controlling the scene being drawn
@@ -16,5 +18,5 @@ namespace SceneControl {
 	/// Change the current GameScene being used
 	/// </summary>
 	/// <param name="gameScene"></param>
-	void switchScene(GameScene& gameScene);
+	void switchScene(GameObjects::GameScene& gameScene);
 }

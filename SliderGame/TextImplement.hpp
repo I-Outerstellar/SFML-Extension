@@ -1,14 +1,18 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 
-class TextImplement {
-protected:
+namespace GameObjects {
 
-public:
-	sf::Text text;
+	class TextImplement {
+	protected:
 
-	TextImplement(const sf::Text& text) : text(text) {}
+	public:
+		sf::Text text;
 
-	virtual void changeText(std::string text) = 0;
-	virtual ~TextImplement() = default;
-};
+		TextImplement(const sf::Text& text) : text(text) {}
+
+		virtual void changeText(std::string text) = 0;
+		virtual ~TextImplement() = default;
+	};
+
+}

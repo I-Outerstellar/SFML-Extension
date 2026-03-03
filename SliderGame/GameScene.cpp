@@ -4,6 +4,8 @@
 #include "SceneData.hpp"
 #include <algorithm>
 
+using namespace GameObjects;
+
 GameScene::GameScene() {}
 
 void GameScene::moveBackButton() {

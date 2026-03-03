@@ -3,6 +3,8 @@
 #include "SceneData.hpp"
 #include "GameWindow.hpp"
 
+using namespace GameObjects;
+
 std::shared_ptr<GamePolygon> GamePolygon::create(unsigned int zIndex) {
 	struct GamePolygonAccess : GamePolygon {
 		GamePolygonAccess(unsigned int zIndex) : GamePolygon(zIndex) {}

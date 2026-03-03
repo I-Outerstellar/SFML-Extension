@@ -3,64 +3,68 @@
 #include <vector>
 #include <memory>
 
-class GameButton;
-class GameShape;
+namespace GameObjects {
 
-/// <summary>
-/// Class that stores shape and button info as a "Scene"
-/// </summary>
-class GameScene {
-protected:
-	/// <summary>
-	/// Helper method that moves the pushed-to-back button forward in its vector.
-	/// </summary>
-	void moveBackButton();
+	class GameButton;
+	class GameShape;
 
 	/// <summary>
-	/// Helper method that moves the pushed-to-back shape forward in its vector.
+	/// Class that stores shape and button info as a "Scene"
 	/// </summary>
-	void moveBackShape();
-	std::vector<std::shared_ptr<GameButton>> sceneButtons{};
-	std::vector<std::shared_ptr<GameShape>> sceneShapes{};
-	
-public:
-	GameScene();
+	class GameScene {
+	protected:
+		/// <summary>
+		/// Helper method that moves the pushed-to-back button forward in its vector.
+		/// </summary>
+		void moveBackButton();
 
-	sf::Color backgroundColour = sf::Color(30, 45, 75);
+		/// <summary>
+		/// Helper method that moves the pushed-to-back shape forward in its vector.
+		/// </summary>
+		void moveBackShape();
+		std::vector<std::shared_ptr<GameButton>> sceneButtons{};
+		std::vector<std::shared_ptr<GameShape>> sceneShapes{};
 
-	/// <summary>
-	/// Returns the vector of scene buttons.
-	/// </summary>
-	/// <returns></returns>
-	std::vector<std::shared_ptr<GameButton>> getSceneButtons();
+	public:
+		GameScene();
 
-	/// <summary>
-	/// Returns the vector of scene shapes.
-	/// </summary>
-	/// <returns></returns>
-	std::vector<std::shared_ptr<GameShape>> getSceneShapes();
+		sf::Color backgroundColour = sf::Color(30, 45, 75);
 
-	/// <summary>
-	/// Adds a button to a scene.
-	/// </summary>
-	/// <param name="button"></param>
-	void add(std::shared_ptr<GameButton>& button);
+		/// <summary>
+		/// Returns the vector of scene buttons.
+		/// </summary>
+		/// <returns></returns>
+		std::vector<std::shared_ptr<GameButton>> getSceneButtons();
 
-	/// <summary>
-	/// Adds a shape to a scene.
-	/// </summary>
-	/// <param name="shape"></param>
-	void add(std::shared_ptr<GameShape>& shape);
+		/// <summary>
+		/// Returns the vector of scene shapes.
+		/// </summary>
+		/// <returns></returns>
+		std::vector<std::shared_ptr<GameShape>> getSceneShapes();
 
-	/// <summary>
-	/// Removes a button from a scene.
-	/// </summary>
-	/// <param name="button"></param>
-	void remove(std::shared_ptr<GameButton>& button);
+		/// <summary>
+		/// Adds a button to a scene.
+		/// </summary>
+		/// <param name="button"></param>
+		void add(std::shared_ptr<GameButton>& button);
 
-	/// <summary>
-	/// Removes a shape from a scene.
-	/// </summary>
-	/// <param name="shape"></param>
-	void remove(std::shared_ptr<GameShape>& shape);
-};
+		/// <summary>
+		/// Adds a shape to a scene.
+		/// </summary>
+		/// <param name="shape"></param>
+		void add(std::shared_ptr<GameShape>& shape);
+
+		/// <summary>
+		/// Removes a button from a scene.
+		/// </summary>
+		/// <param name="button"></param>
+		void remove(std::shared_ptr<GameButton>& button);
+
+		/// <summary>
+		/// Removes a shape from a scene.
+		/// </summary>
+		/// <param name="shape"></param>
+		void remove(std::shared_ptr<GameShape>& shape);
+	};
+
+}

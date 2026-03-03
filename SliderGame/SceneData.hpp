@@ -2,12 +2,15 @@
 #include <vector>
 #include <memory>
 
-class GameScene;
+namespace GameObjects {
+	class GameScene;
+}
 
 /// <summary>
 /// Namespace that holds the currently used scene
 /// </summary>
 namespace SceneStorage {
-	extern GameScene defaultScene;
-	extern GameScene& currentScene;
+
+	extern GameObjects::GameScene defaultScene;
+	extern GameObjects::GameScene& currentScene;
 }

@@ -18,6 +18,6 @@ void SceneControl::draw() {
 
 }
 
-void SceneControl::switchScene(GameScene& scene) {
+void SceneControl::switchScene(GameObjects::GameScene& scene) {
     SceneStorage::currentScene = scene;
 }

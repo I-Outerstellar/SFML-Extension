@@ -4,7 +4,6 @@
 
 #pragma once
 
-
 #include "GameDrawable.hpp"
 #include "GameShape.hpp"
 #include "RectangleButton.hpp"
@@ -13,4 +12,3 @@
 #include "GameRectangle.hpp"
 #include "GamePolygon.hpp"
 #include "TextBox.hpp"
-

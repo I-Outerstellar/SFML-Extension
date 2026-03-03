@@ -3,6 +3,8 @@
 #include "SceneData.hpp"
 #include "GameWindow.hpp"
 
+using namespace GameObjects;
+
 std::shared_ptr<GameCircle> GameCircle::create(unsigned int zIndex) {
 	struct GameCircleAccess : public GameCircle {
 		GameCircleAccess(unsigned int zIndex) : GameCircle(zIndex) {}
