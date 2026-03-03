@@ -4,17 +4,19 @@
 #include <chrono>
 #include <atomic>
 
-using namespace StateData::Enums;
-
 /* HELPERS */
 
-static bool& accessKey(Keys key) {
-	return keysActivated[static_cast<unsigned short>(key)];
+static bool& accessKey(sf::Keyboard::Scancode key) {
+	return keysActivated[StateControl::scancodeToInt(key)];
 }
 
 /* ACCESSORS */
 
-bool StateControl::Accessors::getKeyPressed(Keys key) {
+int StateControl::scancodeToInt(sf::Keyboard::Scancode key) {
+	return static_cast<int>(key) + 1;
+}
+
+bool StateControl::Accessors::getKeyPressed(sf::Keyboard::Scancode key) {
 	return accessKey(key);
 }
 
@@ -24,7 +26,7 @@ bool StateControl::Accessors::canAcceptInput() {
 
 /* MODIFIERS */
 
-void StateControl::Modifiers::setKeyPressed(Keys key, bool state) {
+void StateControl::Modifiers::setKeyPressed(sf::Keyboard::Scancode key, bool state) {
 	accessKey(key) = state;
 }
 

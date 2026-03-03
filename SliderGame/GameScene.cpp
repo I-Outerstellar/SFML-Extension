@@ -2,11 +2,16 @@
 #include "GameButton.hpp"
 #include "GameShape.hpp"
 #include "SceneData.hpp"
+#include "StateControl.hpp"
 #include <algorithm>
 
 using namespace GameObjects;
 
-GameScene::GameScene() {}
+GameScene::GameScene() {
+	this->keyPressFunctions[StateControl::scancodeToInt(sf::Keyboard::Scancode::Escape)] = []() {
+		window.close();
+	};
+}
 
 void GameScene::moveBackButton() {
 	for (size_t i = this->sceneButtons.size() - 1; i >= 1; i--) {

@@ -31,6 +31,8 @@ namespace GameObjects {
 
 		sf::Color backgroundColour = sf::Color(30, 45, 75);
 
+		std::function<void()> keyPressFunctions[147], keyReleaseFunctions[147];
+
 		/// <summary>
 		/// Returns the vector of scene buttons.
 		/// </summary>

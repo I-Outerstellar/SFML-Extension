@@ -5,16 +5,5 @@
 	May be due for change
 */
 
-namespace StateData {
-	namespace Enums {
-		enum class Keys : int {
-			UP, DOWN, LEFT, RIGHT,
-			W, A, S, D,
-			ENTER, ESC
-		};
-	}
-}
-using namespace StateData::Enums;
-
-extern bool keysActivated[];
+extern bool keysActivated[147];
 extern std::atomic<bool> acceptingInput;

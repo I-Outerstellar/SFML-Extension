@@ -33,40 +33,19 @@ void EventFunctions::escPressEvent() {
     window.close();
 }
 
+const std::function<void(const sf::Event::Closed& event)> EventListeners::windowClosed = [](const sf::Event::Closed& event) {
+    window.close();
+};
+
 const std::function<void(const sf::Event::KeyPressed& keyPressed)> 
 EventListeners::onKeyPressed = [](const sf::Event::KeyPressed& keyPressed) {
     using namespace sf::Keyboard;
-
-    if (keyPressed.scancode == Scancode::Escape) {
-        StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::ESC, true);
-        EventFunctions::escPressEvent();
-    }
-    else if (StateControl::Accessors::canAcceptInput() == false) {
-        return;
-    }
-    else if (keyPressed.scancode == Scancode::W) {
-        StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::W, true);
-    }
-    else if (keyPressed.scancode == Scancode::A) {
-        StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::A, true);
-    }
-    else if (keyPressed.scancode == Scancode::S) {
-        StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::S, true);
-    }
-    else if (keyPressed.scancode == Scancode::D) {
-        StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::D, true);
-    }
-    else if (keyPressed.scancode == Scancode::Up) {
-        StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::UP, true);
-    }
-    else if (keyPressed.scancode == Scancode::Left) {
-        StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::LEFT, true);
-    }
-    else if (keyPressed.scancode == Scancode::Down) {
-        StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::DOWN, true);
-    }
-    else if (keyPressed.scancode == Scancode::Right) {
-        StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::RIGHT, true);
+    
+    if (StateControl::Accessors::canAcceptInput() == true) {
+        StateControl::Modifiers::setKeyPressed(keyPressed.scancode, true);
+        std::function<void()> keyPressFunction = SceneStorage::currentScene->keyPressFunctions[StateControl::scancodeToInt(keyPressed.scancode)];
+        if (keyPressFunction != nullptr) keyPressFunction();
+        
     }
 };
 
@@ -74,33 +53,9 @@ const std::function<void(const sf::Event::KeyReleased& keyReleased)>
 EventListeners::onKeyReleased = [](const sf::Event::KeyReleased& keyReleased) {
     using namespace sf::Keyboard;
 
-    if (keyReleased.scancode == Scancode::Escape) {
-        StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::ESC, false);
-    }
-    else if (keyReleased.scancode == Scancode::W) {
-        StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::W, false);
-    }
-    else if (keyReleased.scancode == Scancode::A) {
-        StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::A, false);
-    }
-    else if (keyReleased.scancode == Scancode::S) {
-        StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::S, false);
-    }
-    else if (keyReleased.scancode == Scancode::D) {
-        StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::D, false);
-    }
-    else if (keyReleased.scancode == Scancode::Up) {
-        StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::UP, false);
-    }
-    else if (keyReleased.scancode == Scancode::Left) {
-        StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::LEFT, false);
-    }
-    else if (keyReleased.scancode == Scancode::Down) {
-        StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::DOWN, false);
-    }
-    else if (keyReleased.scancode == Scancode::Right) {
-        StateControl::Modifiers::setKeyPressed(StateData::Enums::Keys::RIGHT, false);
-    }
+    StateControl::Modifiers::setKeyPressed(keyReleased.scancode, false);
+    std::function<void()> keyReleaseFunction = SceneStorage::currentScene->keyReleaseFunctions[StateControl::scancodeToInt(keyReleased.scancode)];
+    if (keyReleaseFunction != nullptr) keyReleaseFunction();
 };
 
 #pragma warning (push)

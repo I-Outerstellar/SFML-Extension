@@ -24,14 +24,14 @@ void TextButton::clickEvent() {
 	if (!this->getGlobalBounds().contains(mousePos))
 		return;
 	this->pressed = true;
-	if (onClick != NULL)
+	if (onClick != nullptr)
 		onClick();
 }
 
 void TextButton::clickReleaseEvent() {
 	if (!this->pressed) return;
 	this->pressed = false;
-	if (onClickRelease != NULL)
+	if (onClickRelease != nullptr)
 		onClickRelease();
 }
 

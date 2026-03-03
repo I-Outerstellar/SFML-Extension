@@ -1,14 +1,15 @@
 #pragma once
-#include "StateData.hpp"
+#include <SFML/Window/Keyboard.hpp>
 
 namespace StateControl {
+
+	int scancodeToInt(sf::Keyboard::Scancode key);
 
 	/// <summary>
 	/// Getters/Accessor methods for the current game states
 	/// </summary>
 	namespace Accessors {
-		using namespace StateData::Enums;
-		bool getKeyPressed(Keys key);
+		bool getKeyPressed(sf::Keyboard::Scancode key);
 		bool canAcceptInput();
 	}
 	
@@ -16,8 +17,7 @@ namespace StateControl {
 	/// Setters/Modifiers for the current game states
 	/// </summary>
 	namespace Modifiers {
-		using namespace StateData::Enums;
-		void setKeyPressed(Keys key, bool state);
+		void setKeyPressed(sf::Keyboard::Scancode key, bool state);
 		void disableInputAccepting(unsigned int milliseconds);
 	}
 

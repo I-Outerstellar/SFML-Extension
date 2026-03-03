@@ -21,14 +21,13 @@ int main()
         wow++;
         std::cout << std::to_string(wow) << " OMG IT WAS CLICKED\n";
         button->changeText("WOW\n" + std::to_string(wow));
-        if (&SceneControl::getCurrentScene() == &scene) {
-            SceneControl::switchScene(scene2);
-        }
-        else {
-            SceneControl::switchScene(scene);
-        }
-        
+    };
+    scene.keyPressFunctions[StateControl::scancodeToInt(sf::Keyboard::Scancode::E)] = []() {
+        SceneControl::switchScene(scene2);
         scene2.backgroundColour = { static_cast<uint8_t>(rand() % 128), static_cast<uint8_t>(rand() % 128), static_cast<uint8_t>(rand() % 128) };
+    };
+    scene2.keyReleaseFunctions[StateControl::scancodeToInt(sf::Keyboard::Scancode::E)] = []() {
+        SceneControl::switchScene(scene);
     };
     button->changeText("WOW");
     button->setPosition({0, 0});
@@ -70,7 +69,9 @@ int main()
 
     while (window.isOpen())
     {
-        window.handleEvents(EventListeners::onKeyPressed, EventListeners::onKeyReleased, EventListeners::onClick, EventListeners::onClickRelease);
+        window.handleEvents(EventListeners::onKeyPressed, EventListeners::onKeyReleased, 
+            EventListeners::onClick, EventListeners::onClickRelease, EventListeners::windowClosed);
+        
         SceneControl::draw();
     }
 }
