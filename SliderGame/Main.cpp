@@ -12,6 +12,11 @@ using namespace GameObjects;
 
 int wow = 0;
 
+/*
+    TODO:
+    - Research how sprites/images are done in SFML
+ */
+
 int main()
 {
     std::srand(std::time(nullptr)); //Randomization setup
@@ -35,7 +40,8 @@ int main()
 
     /*Creating a text game object*/
     static sf::Font font("C:\\Windows\\Fonts\\BKANT.TTF");
-    static std::shared_ptr<TextButton> button = TextButton::create(sf::Text(font), 42);
+    static std::shared_ptr<TextButton> button = TextButton::create(sf::Text(font), 42); 
+    //When creating these shared pointers via the factory method, it's fine to use auto. This is merely for demonstration purposes.
 
     /*Defining how a button reacts on click*/
     button->onClick = [](sf::Mouse::Button mouseButton) { //There is also a onClickRelease method
