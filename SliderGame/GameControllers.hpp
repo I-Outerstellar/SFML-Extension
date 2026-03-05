@@ -3,3 +3,4 @@
 #include "EventControl.hpp"
 #include "StateControl.hpp"
 #include "SceneControl.hpp"
+#include "WindowControl.hpp"

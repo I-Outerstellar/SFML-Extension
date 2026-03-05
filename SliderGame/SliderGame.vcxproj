@@ -145,6 +145,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="TextBox.cpp" />
     <ClCompile Include="TextButton.cpp" />
+    <ClCompile Include="WindowControl.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameCircle.hpp" />
@@ -166,6 +167,7 @@
     <ClInclude Include="TextBox.hpp" />
     <ClInclude Include="TextButton.hpp" />
     <ClInclude Include="TextImplement.hpp" />
+    <ClInclude Include="WindowControl.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

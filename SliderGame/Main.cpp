@@ -4,6 +4,10 @@
 #include "GameObjects.hpp"
 #include <iostream>
 
+/*
+    Use this main file as a demo
+*/
+
 using namespace GameObjects;
 
 int wow = 0;
@@ -16,10 +20,14 @@ int main()
     SceneControl::switchScene(scene);
     scene.keyPressFunctions[StateControl::scancodeToInt(sf::Keyboard::Scancode::E)] = []() {
         SceneControl::switchScene(scene2);
-        scene2.backgroundColour = { static_cast<uint8_t>(rand() % 128), static_cast<uint8_t>(rand() % 128), static_cast<uint8_t>(rand() % 128) };
         };
     scene2.keyReleaseFunctions[StateControl::scancodeToInt(sf::Keyboard::Scancode::E)] = []() {
-        SceneControl::switchScene(scene);
+        if (scene2.hasProperty("ReleaseCancel")) scene2.deleteProperty("ReleaseCancel");
+        else SceneControl::switchScene(scene);
+        };
+    scene2.switchedTo = [](GameScene& scene) {
+        scene2.setProperty<char*>("ReleaseCancel", nullptr); /*Can be commented out safely*/
+        scene2.backgroundColour = { static_cast<uint8_t>(rand() % 128), static_cast<uint8_t>(rand() % 128), static_cast<uint8_t>(rand() % 128) };
         };
 
 
@@ -36,7 +44,7 @@ int main()
     button->setFillColor(sf::Color::Yellow);
     button->text.setFillColor(sf::Color::Black);
 
-    static std::shared_ptr<GameRectangle> rect = GameRectangle::create(1);
+    static std::shared_ptr<GameRectangle> rect = GameRectangle::create(1); //Unsigned integer is zIndex.
     rect->setPosition({400, 200});
     rect->setSize({200, 200});
 
@@ -58,13 +66,15 @@ int main()
     polygon->setFillColor(sf::Color::Green);
     polygon->setOutlineColor(sf::Color::White);
     polygon->setOutlineThickness(5);
-    polygon->visible = true;
+    //polygon->visible = true;
+
+    /*Anything between this and the below comment can be commented out safely*/
 
     scene.add(button).add(rect).add(circle).add(polygon);
     scene2.add(button);
-    //scene.remove(circle);
+    //scene.remove(circle); 
 
-    window.setFramerateLimit(30); //Window is declared globally
+    /*Anything between this and the above comment can be commented out safely*/
 
-    beginWindowLoop();
+    WindowControl::beginWindowLoop("Demo", sf::State::Fullscreen, 30);
 }

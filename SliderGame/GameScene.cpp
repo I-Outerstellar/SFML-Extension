@@ -68,3 +68,12 @@ GameScene& GameScene::remove(const std::shared_ptr<GameShape>& shape) {
 		this->sceneShapes.erase(iter);
 	return *this;
 }
+
+bool GameScene::hasProperty(const std::string propertyName) {
+	return this->properties.find(propertyName) != this->properties.end();
+}
+
+GameScene& GameScene::deleteProperty(const std::string propertyName) {
+	this->properties.erase(propertyName);
+	return *this;
+}

@@ -23,5 +23,12 @@ GameObjects::GameScene& SceneControl::getCurrentScene() {
 }
 
 void SceneControl::switchScene(GameObjects::GameScene& scene) {
+    GameObjects::GameScene& beforeScene = *SceneStorage::currentScene;
+    if (beforeScene.switchedFrom != nullptr) {
+        SceneStorage::currentScene->switchedFrom(scene);
+    }
     SceneStorage::currentScene = &scene;
+    if (scene.switchedTo != nullptr) {
+        scene.switchedTo(beforeScene);
+    }
 }

@@ -7,7 +7,7 @@
 /* HELPERS */
 
 static bool& accessKey(sf::Keyboard::Scancode key) {
-	return keysActivated[StateControl::scancodeToInt(key)];
+	return keysActivated.at(StateControl::scancodeToInt(key));
 }
 
 /* ACCESSORS */

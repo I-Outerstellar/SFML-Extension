@@ -105,6 +105,9 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="WindowControl.cpp">
+      <Filter>Source Files\GameSystem\Control</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameDrawable.hpp">
@@ -163,6 +166,9 @@
     </ClInclude>
     <ClInclude Include="GameControllers.hpp">
       <Filter>Header Files\IncludeHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowControl.hpp">
+      <Filter>Header Files\GameSystem\Control</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

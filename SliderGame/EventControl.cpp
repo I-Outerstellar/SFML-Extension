@@ -15,7 +15,7 @@ EventListeners::onKeyPressed = [](const sf::Event::KeyPressed& keyPressed) {
     
     if (StateControl::Accessors::canAcceptInput() == true) {
         StateControl::Modifiers::setKeyPressed(keyPressed.scancode, true);
-        std::function<void()> keyPressFunction = SceneStorage::currentScene->keyPressFunctions[StateControl::scancodeToInt(keyPressed.scancode)];
+        std::function<void()> keyPressFunction = SceneStorage::currentScene->keyPressFunctions.at(StateControl::scancodeToInt(keyPressed.scancode));
         if (keyPressFunction != nullptr) keyPressFunction();
         
     }
@@ -26,7 +26,7 @@ EventListeners::onKeyReleased = [](const sf::Event::KeyReleased& keyReleased) {
     using namespace sf::Keyboard;
 
     StateControl::Modifiers::setKeyPressed(keyReleased.scancode, false);
-    std::function<void()> keyReleaseFunction = SceneStorage::currentScene->keyReleaseFunctions[StateControl::scancodeToInt(keyReleased.scancode)];
+    std::function<void()> keyReleaseFunction = SceneStorage::currentScene->keyReleaseFunctions.at(StateControl::scancodeToInt(keyReleased.scancode));
     if (keyReleaseFunction != nullptr) keyReleaseFunction();
 };
 
