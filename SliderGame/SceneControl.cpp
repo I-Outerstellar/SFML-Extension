@@ -3,6 +3,7 @@
 #include "GameShape.hpp"
 #include "GameScene.hpp"
 #include "SceneData.hpp"
+#include "GameWindow.hpp"
 
 void SceneControl::draw() {
     window.clear(SceneStorage::currentScene->backgroundColour);

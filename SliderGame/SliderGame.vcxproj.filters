@@ -25,9 +25,6 @@
     <Filter Include="Header Files\GameObjects">
       <UniqueIdentifier>{407cb634-4f6e-42b9-b9ed-30f7d3bc62e8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\GameObjects\DoNotTouch">
-      <UniqueIdentifier>{3c89b597-5dbb-4d74-9b5f-809b0b5a09e8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\GameObjects\Buttons">
       <UniqueIdentifier>{54674764-fe76-41bd-8cc2-659d00fd392b}</UniqueIdentifier>
     </Filter>
@@ -60,6 +57,9 @@
     </Filter>
     <Filter Include="Header Files\IncludeHeaders">
       <UniqueIdentifier>{9d959843-9e6e-4a5d-8f82-517f49d5e0ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameObjects\BaseClasses">
+      <UniqueIdentifier>{3c89b597-5dbb-4d74-9b5f-809b0b5a09e8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -111,7 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameDrawable.hpp">
-      <Filter>Header Files\GameObjects\DoNotTouch</Filter>
+      <Filter>Header Files\GameObjects\BaseClasses</Filter>
     </ClInclude>
     <ClInclude Include="TextButton.hpp">
       <Filter>Header Files\GameObjects\Buttons</Filter>
@@ -138,7 +138,7 @@
       <Filter>Header Files\GameObjects\Shapes</Filter>
     </ClInclude>
     <ClInclude Include="GameShape.hpp">
-      <Filter>Header Files\GameObjects\DoNotTouch</Filter>
+      <Filter>Header Files\GameObjects\BaseClasses</Filter>
     </ClInclude>
     <ClInclude Include="GameCircle.hpp">
       <Filter>Header Files\GameObjects\Shapes</Filter>
@@ -159,10 +159,10 @@
       <Filter>Header Files\GameObjects\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="TextImplement.hpp">
-      <Filter>Header Files\GameObjects\DoNotTouch</Filter>
+      <Filter>Header Files\GameObjects\BaseClasses</Filter>
     </ClInclude>
     <ClInclude Include="GameButton.hpp">
-      <Filter>Header Files\GameObjects\DoNotTouch</Filter>
+      <Filter>Header Files\GameObjects\BaseClasses</Filter>
     </ClInclude>
     <ClInclude Include="GameControllers.hpp">
       <Filter>Header Files\IncludeHeaders</Filter>

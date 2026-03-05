@@ -18,15 +18,8 @@ namespace GameObjects {
 		/// Required constructor for the factory method.
 		/// </summary>
 		/// <param name="zIndex"></param>
-		RectangleButton(unsigned int zIndex);
+		RectangleButton(unsigned int zIndex = 0) { this->zIndex = zIndex; }
 	public:
-
-		/// <summary>
-		/// Static factory method to create a button shared pointer and add it to the current scene.
-		/// </summary>
-		/// <param name="zIndex"></param>
-		/// <returns></returns>
-		static std::shared_ptr<RectangleButton> create(unsigned int zIndex = 0);
 
 		/// <summary>
 		/// The method required to listen for a click

@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <memory>
-#include "GameWindow.hpp"
+#include <utility>
 #include "GameDrawable.hpp"
 
 namespace GameObjects {
@@ -33,6 +33,23 @@ namespace GameObjects {
 
 
 		/*Methods*/
+
+		/// <summary>
+		/// Creates a game button of the type specified, limited to buttons inheriting GameButton.
+		/// </summary>
+		/// <typeparam name="T"></typeparam>
+		/// <typeparam name="...Args"></typeparam>
+		/// <param name="...args"></param>
+		/// <returns>A shared pointer to the button created.</returns>
+		template<std::derived_from<GameButton> T, typename... Args>
+		static std::shared_ptr<T> create(Args&&... args) {
+			struct GameButtonAccess : public T {
+				GameButtonAccess(Args&&... args) : T(std::forward<Args>(args)...) {}
+			};
+
+			std::shared_ptr<GameButton> button = std::make_shared<GameButtonAccess>(std::forward<Args>(args)...);
+			return std::static_pointer_cast<T>(button);
+		}
 
 		/// <summary>
 		/// Returns if the button is pressed.

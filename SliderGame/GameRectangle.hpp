@@ -9,14 +9,8 @@ namespace GameObjects {
 	/// </summary>
 	class GameRectangle : public GameShape, public sf::RectangleShape {
 	protected:
-		GameRectangle(unsigned int zIndex) { this->zIndex = zIndex; }
+		GameRectangle(unsigned int zIndex = 0) { this->zIndex = zIndex; }
 	public:
-		/// <summary>
-		/// Static factory method that creates a rectangle shared pointer and adds it to the current scene.
-		/// </summary>
-		/// <param name="zIndex"></param>
-		/// <returns></returns>
-		static std::shared_ptr<GameRectangle> create(unsigned int zIndex = 0);
 
 		/// <summary>
 		/// Checks if this shape intersects another shape.

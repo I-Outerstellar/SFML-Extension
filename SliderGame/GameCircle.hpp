@@ -9,14 +9,8 @@ namespace GameObjects {
 	/// </summary>
 	class GameCircle : public GameShape, public sf::CircleShape {
 	protected:
-		GameCircle(unsigned int zIndex) { this->zIndex = zIndex; };
+		GameCircle(unsigned int zIndex = 0) { this->zIndex = zIndex; };
 	public:
-		/// <summary>
-		/// Static factory method that creates a circle shared pointer and adds it to the current scene.
-		/// </summary>
-		/// <param name="zIndex"></param>
-		/// <returns></returns>
-		static std::shared_ptr<GameCircle> create(unsigned int zIndex = 0);
 
 		/// <summary>
 		/// Returns if this shape and the given shape intersects or not.

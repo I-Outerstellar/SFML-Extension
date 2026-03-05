@@ -2,6 +2,7 @@
 #include "GameButton.hpp"
 #include "GameShape.hpp"
 #include "SceneData.hpp"
+#include "GameWindow.hpp"
 #include "StateControl.hpp"
 #include <algorithm>
 

@@ -5,15 +5,6 @@
 
 using namespace GameObjects;
 
-std::shared_ptr<GameRectangle> GameRectangle::create(unsigned int zIndex) {
-	struct GameRectangleAccess : GameRectangle {
-		GameRectangleAccess(unsigned int zIndex) : GameRectangle(zIndex) {}
-	};
-
-	std::shared_ptr<GameShape> rect = std::make_shared<GameRectangleAccess>(zIndex);
-	return std::static_pointer_cast<GameRectangle>(rect);
-}
-
 bool GameRectangle::intersects(sf::Shape& shape) {
 	return this->getGlobalBounds().findIntersection(shape.getGlobalBounds()).has_value();
 }

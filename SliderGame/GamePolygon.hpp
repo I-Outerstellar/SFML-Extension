@@ -9,14 +9,8 @@ namespace GameObjects {
 	/// </summary>
 	class GamePolygon : public GameShape, public sf::ConvexShape {
 	protected:
-		GamePolygon(unsigned int zIndex) { this->zIndex = zIndex; };
+		GamePolygon(unsigned int zIndex = 0) { this->zIndex = zIndex; };
 	public:
-		/// <summary>
-		/// Static factory method that creates a polygon shared pointer and adds it to the current scene.
-		/// </summary>
-		/// <param name="zIndex"></param>
-		/// <returns></returns>
-		static std::shared_ptr<GamePolygon> create(unsigned int zIndex = 0);
 
 		/// <summary>
 		/// Checks if this shape is intersecting another shape.

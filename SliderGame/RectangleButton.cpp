@@ -1,20 +1,9 @@
 #include "RectangleButton.hpp"
 #include "GameScene.hpp"
 #include "SceneData.hpp"
+#include "GameWindow.hpp"
 
 using namespace GameObjects;
-
-
-RectangleButton::RectangleButton(unsigned int zIndex) : RectangleShape() { this->zIndex = zIndex; }
-
-std::shared_ptr<RectangleButton> RectangleButton::create(unsigned int zIndex) {
-	struct RectangleButtonAccess : public RectangleButton {
-		RectangleButtonAccess(unsigned int zIndex) : RectangleButton(zIndex) {}
-	};
-
-	std::shared_ptr<GameButton> button = std::make_shared<RectangleButtonAccess>(zIndex);
-	return std::static_pointer_cast<RectangleButton>(button);
-}
 
 void RectangleButton::clickEvent(sf::Mouse::Button mouseButton) {
 	if (this->pressed || !this->active) return;

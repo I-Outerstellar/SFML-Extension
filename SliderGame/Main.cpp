@@ -40,7 +40,7 @@ int main()
 
     /*Creating a text game object*/
     static sf::Font font("C:\\Windows\\Fonts\\BKANT.TTF");
-    static std::shared_ptr<TextButton> button = TextButton::create(sf::Text(font), 42); 
+    static std::shared_ptr<TextButton> button = GameButton::create<TextButton>(sf::Text(font), 42); 
     //When creating these shared pointers via the factory method, it's fine to use auto. This is merely for demonstration purposes.
 
     /*Defining how a button reacts on click*/
@@ -58,12 +58,12 @@ int main()
     button->text.setFillColor(sf::Color::Black);
 
     /*Creating a rectangle and setting its attributes*/
-    static std::shared_ptr<GameRectangle> rect = GameRectangle::create(1); //Unsigned integer is zIndex.
+    static std::shared_ptr<GameRectangle> rect = GameShape::create<GameRectangle>(1); //Unsigned integer is zIndex.
     rect->setPosition({400, 200});
     rect->setSize({200, 200});
 
     /*Creating a circle and setting its attributes*/
-    static std::shared_ptr<GameCircle> circle = GameCircle::create();
+    static std::shared_ptr<GameCircle> circle = GameShape::create<GameCircle>();
     circle->setPosition(sf::Vector2f(400, 200));
     circle->setRadius(100);
     circle->setFillColor(sf::Color(153, 153, 153));
@@ -71,7 +71,7 @@ int main()
     circle->setOutlineThickness(2);
 
     /*Creating a polygon and setting its points*/
-    std::shared_ptr<GamePolygon> polygon = GamePolygon::create(1);
+    std::shared_ptr<GamePolygon> polygon = GameShape::create<GamePolygon>(1);
     polygon->setPointCount(4);
     polygon->setPoint(0, { 500, 500 });
     polygon->setPoint(1, { 600, 400 });
