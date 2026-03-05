@@ -10,6 +10,13 @@ namespace GameObjects {
 /// Namespace that holds the currently used scene
 /// </summary>
 namespace SceneStorage {
+	/// <summary>
+	/// The scene that the program always starts at and will always exist.
+	/// </summary>
 	extern GameObjects::GameScene defaultScene;
-	extern GameObjects::GameScene* currentScene; //Research: Reference Wrappers in C++
+
+	/// <summary>
+	/// A pointer to the current scene being displayed and used.
+	/// </summary>
+	extern GameObjects::GameScene* currentScene;
 }

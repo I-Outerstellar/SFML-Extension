@@ -7,9 +7,21 @@ namespace GameObjects {
 	/// </summary>
 	class GameDrawable {
 	protected:
+		/// <summary>
+		/// The zIndex of the drawwable, affecting what order it draws in
+		/// </summary>
 		unsigned int zIndex = 0;
 	public:
+		/*Variables*/
+
+		/// <summary>
+		/// Determines if the shape will be drawn or not.
+		/// </summary>
 		bool visible = true;
+
+
+		/*Methods*/
+
 		/// <summary>
 		/// Gets the Z-Index of the drawable object.
 		/// </summary>

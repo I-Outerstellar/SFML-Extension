@@ -13,15 +13,26 @@ namespace GameObjects {
 	/// </summary>
 	class GameButton : public GameDrawable {
 	protected:
+		/// <summary>
+		/// Determines if the button is pressed down or not.
+		/// </summary>
 		bool pressed = false;
 
 	public:
+		/*Variables*/
+
+		/// <summary>
+		/// Determines if the button can be used or not.
+		/// </summary>
 		bool active = true;
 
 		/// <summary>
 		/// Definable method for on click and on click release
 		/// </summary>
-		std::function<void()> onClick, onClickRelease;
+		std::function<void(sf::Mouse::Button)> onClick, onClickRelease;
+
+
+		/*Methods*/
 
 		/// <summary>
 		/// Returns if the button is pressed.
@@ -32,12 +43,12 @@ namespace GameObjects {
 		/// <summary>
 		/// The method required to listen for a click
 		/// </summary>
-		virtual void clickEvent() = 0;
+		virtual void clickEvent(sf::Mouse::Button mouseButton) = 0;
 
 		/// <summary>
 		/// The method required to listen to a click release
 		/// </summary>
-		virtual void clickReleaseEvent() = 0;
+		virtual void clickReleaseEvent(sf::Mouse::Button mouseButton) = 0;
 
 		virtual ~GameButton() = default;
 	};

@@ -18,17 +18,20 @@ void SceneControl::draw() {
 
 }
 
-GameObjects::GameScene& SceneControl::getCurrentScene() {
+GameObjects::GameScene& SceneControl::currentScene() {
     return *SceneStorage::currentScene;
 }
 
 void SceneControl::switchScene(GameObjects::GameScene& scene) {
     GameObjects::GameScene& beforeScene = *SceneStorage::currentScene;
+    bool scene1Pass = true, scene2Pass = true;
     if (beforeScene.switchedFrom != nullptr) {
-        SceneStorage::currentScene->switchedFrom(scene);
+        scene1Pass = SceneStorage::currentScene->switchedFrom(scene);
     }
-    SceneStorage::currentScene = &scene;
     if (scene.switchedTo != nullptr) {
-        scene.switchedTo(beforeScene);
+        scene2Pass = scene.switchedTo(beforeScene);
     }
+    if (scene1Pass && scene2Pass)
+        SceneStorage::currentScene = &scene;
+    
 }

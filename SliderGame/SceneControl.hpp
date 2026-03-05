@@ -17,7 +17,7 @@ namespace SceneControl {
 	/// Returns the current scene being used in a modifiable state
 	/// </summary>
 	/// <returns></returns>
-	GameObjects::GameScene& getCurrentScene();
+	GameObjects::GameScene& currentScene();
 
 	/// <summary>
 	/// Change the current GameScene being used

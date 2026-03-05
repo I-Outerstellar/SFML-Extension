@@ -10,6 +10,12 @@ namespace GameObjects {
 	/// </summary>
 	class TextButton : public sf::RectangleShape, public TextImplement, public GameButton {
 	private:
+		/// <summary>
+		/// Required constructor for the factory method.
+		/// </summary>
+		/// <param name="text"></param>
+		/// <param name="zIndex"></param>
+		/// <param name="characterSize"></param>
 		TextButton(sf::Text text, unsigned int zIndex, unsigned int characterSize) :
 			TextImplement(text), sf::RectangleShape()
 		{
@@ -30,12 +36,12 @@ namespace GameObjects {
 		/// <summary>
 		/// The method required to listen for a click
 		/// </summary>
-		virtual void clickEvent() override;
+		virtual void clickEvent(sf::Mouse::Button mouseButton) override;
 
 		/// <summary>
 		/// The method required to listen to a click release
 		/// </summary>
-		virtual void clickReleaseEvent() override;
+		virtual void clickReleaseEvent(sf::Mouse::Button mouseButton) override;
 
 		/// <summary>
 		/// Change the text of the button.

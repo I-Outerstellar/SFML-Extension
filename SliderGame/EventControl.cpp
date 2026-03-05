@@ -13,11 +13,10 @@ const std::function<void(const sf::Event::KeyPressed& keyPressed)>
 EventListeners::onKeyPressed = [](const sf::Event::KeyPressed& keyPressed) {
     using namespace sf::Keyboard;
     
-    if (StateControl::Accessors::canAcceptInput() == true) {
+    if (StateControl::Accessors::canAcceptInput() == true || keyPressed.scancode == sf::Keyboard::Scancode::Escape) {
         StateControl::Modifiers::setKeyPressed(keyPressed.scancode, true);
         std::function<void()> keyPressFunction = SceneStorage::currentScene->keyPressFunctions.at(StateControl::scancodeToInt(keyPressed.scancode));
         if (keyPressFunction != nullptr) keyPressFunction();
-        
     }
 };
 
@@ -34,16 +33,18 @@ EventListeners::onKeyReleased = [](const sf::Event::KeyReleased& keyReleased) {
 #pragma warning (disable : 4100)
 const std::function<void(const sf::Event::MouseButtonPressed& mouseClick)> 
 EventListeners::onClick = [](const sf::Event::MouseButtonPressed& mouseClick) {
+    StateControl::Modifiers::setMouseButtonPressed(mouseClick.button, true);
     if (!StateControl::Accessors::canAcceptInput()) return;
     for (auto& b : SceneStorage::currentScene->getSceneButtons()) {
-        b->clickEvent();
+        b->clickEvent(mouseClick.button);
     }
 };
 
 const std::function<void(const sf::Event::MouseButtonReleased& mouseClickRelease)> 
 EventListeners::onClickRelease = [](const sf::Event::MouseButtonReleased& mouseClickRelease) {
+    StateControl::Modifiers::setMouseButtonPressed(mouseClickRelease.button, false);
     for (auto& b : SceneStorage::currentScene->getSceneButtons()) {
-        b->clickReleaseEvent();
+        b->clickReleaseEvent(mouseClickRelease.button);
     }
 };
 #pragma warning (pop)

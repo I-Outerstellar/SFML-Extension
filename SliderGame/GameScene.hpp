@@ -32,13 +32,38 @@ namespace GameObjects {
 		std::unordered_map<std::string, std::any> properties;
 
 	public:
+		/// <summary>
+		/// Constructs an empty GameScene.
+		/// </summary>
 		GameScene();
 
+
+		/*Variables*/
+
+		/// <summary>
+		/// The background colour of the scene.
+		/// </summary>
 		sf::Color backgroundColour = sf::Color(30, 45, 75);
 
+		/// <summary>
+		/// An array of functions for all key inputs SFML provides, used to determine key press and release events.
+		/// </summary>
 		std::array<std::function<void()>, 147> keyPressFunctions{}, keyReleaseFunctions{};
-		std::function<void(GameScene& sceneAfter)> switchedFrom;
-		std::function<void(GameScene& sceneBefore)> switchedTo;
+
+		/// <summary>
+		/// A function that can be initialized to define behaviour upon switching from this scene to another scene. 
+		/// Should return true if it is allowed to switch scenes and false if it is not allowed to switch.
+		/// </summary>
+		std::function<bool(GameScene& sceneAfter)> switchedFrom;
+
+		/// <summary>
+		/// A function that can be initialized to define behaviour upon switching from another scene to this scene. 
+		/// Should return true if it is allowed to switch scenes and false if it is not allowed to switch.
+		/// </summary>
+		std::function<bool(GameScene& sceneBefore)> switchedTo;
+
+
+		/*Methods*/
 
 		/// <summary>
 		/// Returns the vector of scene buttons.

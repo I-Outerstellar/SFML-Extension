@@ -4,7 +4,7 @@
 #include "EventControl.hpp"
 
 void WindowControl::beginWindowLoop(const std::string title, sf::State windowState, unsigned int fps) {
-    window = sf::RenderWindow(sf::VideoMode::getDesktopMode(), title, windowState);
+    window.create(sf::VideoMode::getDesktopMode(), title, windowState);
     window.setFramerateLimit(fps);
 
     while (window.isOpen())
@@ -14,4 +14,9 @@ void WindowControl::beginWindowLoop(const std::string title, sf::State windowSta
 
         SceneControl::draw();
     }
+
+}
+
+sf::Window& WindowControl::gameWindow() {
+    return window;
 }

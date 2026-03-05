@@ -14,6 +14,10 @@ namespace GameObjects {
 	class RectangleButton : public sf::RectangleShape, public GameButton {
 	protected:
 
+		/// <summary>
+		/// Required constructor for the factory method.
+		/// </summary>
+		/// <param name="zIndex"></param>
 		RectangleButton(unsigned int zIndex);
 	public:
 
@@ -27,12 +31,12 @@ namespace GameObjects {
 		/// <summary>
 		/// The method required to listen for a click
 		/// </summary>
-		virtual void clickEvent() override;
+		virtual void clickEvent(sf::Mouse::Button mouseButton) override;
 
 		/// <summary>
 		/// The method required to listen to a click release
 		/// </summary>
-		virtual void clickReleaseEvent() override;
+		virtual void clickReleaseEvent(sf::Mouse::Button mouseButton) override;
 
 		/// <summary>
 		/// Draws the button.

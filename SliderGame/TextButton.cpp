@@ -18,21 +18,21 @@ void TextButton::changeText(std::string text) {
 	this->draw();
 }
 
-void TextButton::clickEvent() {
+void TextButton::clickEvent(sf::Mouse::Button mouseButton) {
 	if (this->pressed || !this->active) return;
 	sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
 	if (!this->getGlobalBounds().contains(mousePos))
 		return;
 	this->pressed = true;
 	if (onClick != nullptr)
-		onClick();
+		onClick(mouseButton);
 }
 
-void TextButton::clickReleaseEvent() {
+void TextButton::clickReleaseEvent(sf::Mouse::Button mouseButton) {
 	if (!this->pressed) return;
 	this->pressed = false;
 	if (onClickRelease != nullptr)
-		onClickRelease();
+		onClickRelease(mouseButton);
 }
 
 void TextButton::draw() {

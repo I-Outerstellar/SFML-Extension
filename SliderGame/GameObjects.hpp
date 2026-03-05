@@ -1,8 +1,8 @@
-/*
-	File of includes
-*/
-
 #pragma once
+
+/*
+	File of includes for all objects needed in the program.
+*/
 
 /*Scene*/
 

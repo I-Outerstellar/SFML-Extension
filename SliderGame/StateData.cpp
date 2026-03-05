@@ -2,5 +2,6 @@
 
 /* VARIABLES */
 
-std::array<bool, 147> keysActivated{};
-std::atomic<bool> acceptingInput = true;
+std::array<bool, 147> StateData::keysActivated{};
+std::array<bool, 5> StateData::mouseButtonsActivated{};
+std::atomic<bool> StateData::acceptingInput = true;
