@@ -29,6 +29,7 @@ namespace GameObjects {
 		const void moveBackShape();
 		std::vector<std::shared_ptr<GameButton>> sceneButtons{};
 		std::vector<std::shared_ptr<GameShape>> sceneShapes{};
+		std::vector<std::function<void()>*> beforeDraw{}, afterDraw{};
 		std::unordered_map<std::string, std::any> properties;
 
 	public:
@@ -76,6 +77,20 @@ namespace GameObjects {
 		/// </summary>
 		/// <returns></returns>
 		std::vector<std::shared_ptr<GameShape>> getSceneShapes();
+
+		/// <summary>
+		/// Checks if the scene contains the given button.
+		/// </summary>
+		/// <param name="button"></param>
+		/// <returns>True if found, false if not.</returns>
+		bool contains(const std::shared_ptr<GameButton>& button);
+
+		/// <summary>
+		/// Checks if the scene contains the given shape.
+		/// </summary>
+		/// <param name="button"></param>
+		/// <returns>True if found, false if not.</returns>
+		bool contains(const std::shared_ptr<GameShape>& shape);
 
 		/// <summary>
 		/// Adds a button to a scene.
@@ -138,6 +153,58 @@ namespace GameObjects {
 		/// </summary>
 		/// <param name="propertyName"></param>
 		GameScene& deleteProperty(const std::string propertyName);
+
+
+		/// <summary>
+		/// Gets the functions the scene runs before the frame is drawn.
+		/// </summary>
+		/// <returns>A vector containing all function references it contains.</returns>
+		std::vector<std::function<void()>*> getBeforeDrawFunctions();
+
+		/// <summary>
+		/// Gets the functions the scene runs after the frame is drawn.
+		/// </summary>
+		/// <returns>A vector containing all function references it contains.</returns>
+		std::vector<std::function<void()>*> getAfterDrawFunctions();
+
+		/// <summary>
+		/// Checks if the given function already is being fired before a frame is drawn.
+		/// </summary>
+		/// <param name="func"></param>
+		/// <returns>True if found, false if not.</returns>
+		bool containsBeforeDrawFunction(std::function<void()>& func);
+
+		/// <summary>
+		/// Checks if the given function already is being fired after a frame is drawn.
+		/// </summary>
+		/// <param name="func"></param>
+		/// <returns>True if found, false if not.</returns>
+		bool containsAfterDrawFunction(std::function<void()>& func);
+
+		/// <summary>
+		/// Allows the user to add a function that fires before the frame is drawn.
+		/// </summary>
+		/// <param name="func"></param>
+		GameScene& addBeforeDrawFunction(std::function<void()>& func);
+
+		/// <summary>
+		/// Allows the user to add a function that fires after the frame is drawn.
+		/// </summary>
+		/// <param name="func"></param>
+		GameScene& addAfterDrawFunction(std::function<void()>& func);
+
+		/// <summary>
+		/// Removes a function that occurs before drawing a frame, if it exists.
+		/// </summary>
+		/// <param name="func"></param>
+		GameScene& removeBeforeDrawFunction(std::function<void()>& func);
+
+		/// <summary>
+		/// Removes a function that occurs after drawing a frame, if it exists.
+		/// </summary>
+		/// <param name="func"></param>
+		GameScene& removeAfterDrawFunction(std::function<void()>& func);
+		
 	};
 
 }

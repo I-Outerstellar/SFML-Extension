@@ -6,6 +6,11 @@
 #include "GameWindow.hpp"
 
 void SceneControl::draw() {
+
+    for (std::function<void()>* func : SceneStorage::currentScene->getBeforeDrawFunctions()) {
+        if (func != nullptr && *func != nullptr) (*func)();
+    }
+
     window.clear(SceneStorage::currentScene->backgroundColour);
     for (auto& s : SceneStorage::currentScene->getSceneButtons()) {
         if (s->visible)
@@ -16,6 +21,10 @@ void SceneControl::draw() {
             b->draw();
     }
     window.display();
+
+    for (std::function<void()>* func : SceneStorage::currentScene->getAfterDrawFunctions()) {
+        if (func != nullptr && *func != nullptr) (*func)();
+    }
 
 }
 

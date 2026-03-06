@@ -15,16 +15,27 @@ int wow = 0;
 /*
     TODO:
     - Research how sprites/images are done in SFML
+        Sprites are an entirely different SF entity, sf::Sprite.
+        It's not something that can be overlaid on a rectangle or circle.
+        So I must create a new GameShape and GameButton for sprites. Yay!
+
+    - Make the GameScene before and after draw std::function pointers into shared pointers, if possible
+        This is so it is consistent with the rest of the code
  */
 
 int main()
 {
-    std::srand(std::time(nullptr)); //Randomization setup
+    std::srand(static_cast<unsigned int>(std::time(nullptr))); //Randomization setup
 
     /*Creating scenes and showing what they are capable of*/
     static GameScene scene;
     static GameScene scene2;
     SceneControl::switchScene(scene);
+    std::function<void()> beforeDrawFunction1 = []() {
+        if ((rand() % 1000) == 0)
+            std::cout << "1/1000 chance!" << '\n';
+        };
+    scene.addBeforeDrawFunction(beforeDrawFunction1);
     scene.keyPressFunctions[StateControl::scancodeToInt(sf::Keyboard::Scancode::E)] = []() {
         SceneControl::switchScene(scene2);
         };
@@ -32,8 +43,8 @@ int main()
         if (scene2.hasProperty("ReleaseCancel")) scene2.deleteProperty("ReleaseCancel");
         else SceneControl::switchScene(scene);
         };
-    scene2.switchedTo = [](GameScene& scene) { //There is also a switchedFrom method
-        scene2.setProperty<char*>("ReleaseCancel", nullptr); /*Can be commented out safely*/
+    scene2.switchedTo = [](GameScene& sceneBefore) { //There is also a switchedFrom method
+        scene2.setProperty<void*>("ReleaseCancel", nullptr); //This line can be commented out safely to produce a different result
         scene2.backgroundColour = { static_cast<uint8_t>(rand() % 128), static_cast<uint8_t>(rand() % 128), static_cast<uint8_t>(rand() % 128) };
         return true;
         };
