@@ -35,6 +35,11 @@ namespace GameObjects {
 		virtual void clickReleaseEvent(sf::Mouse::Button mouseButton) override;
 
 		/// <summary>
+		/// The method required to listen to mouse movement
+		/// </summary>
+		virtual void mouseMovementEvent(sf::Vector2f mousePosition, sf::Vector2i mouseDelta) override;
+
+		/// <summary>
 		/// Change the text of the button.
 		/// </summary>
 		/// <param name="text"></param>

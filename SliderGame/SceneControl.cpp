@@ -5,11 +5,13 @@
 #include "SceneData.hpp"
 #include "GameWindow.hpp"
 
-void SceneControl::draw() {
-
+void SceneControl::updateBeforeDraw() {
     for (std::function<void()>* func : SceneStorage::currentScene->getBeforeDrawFunctions()) {
         if (func != nullptr && *func != nullptr) (*func)();
     }
+}
+
+void SceneControl::draw() {
 
     window.clear(SceneStorage::currentScene->backgroundColour);
     for (auto& s : SceneStorage::currentScene->getSceneButtons()) {
@@ -22,10 +24,12 @@ void SceneControl::draw() {
     }
     window.display();
 
+}
+
+void SceneControl::updateAterDraw() {
     for (std::function<void()>* func : SceneStorage::currentScene->getAfterDrawFunctions()) {
         if (func != nullptr && *func != nullptr) (*func)();
     }
-
 }
 
 GameObjects::GameScene& SceneControl::currentScene() {

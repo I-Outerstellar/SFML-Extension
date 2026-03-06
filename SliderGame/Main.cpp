@@ -54,12 +54,18 @@ int main()
     static std::shared_ptr<TextButton> button = GameButton::create<TextButton>(sf::Text(font), 42); 
     //When creating these shared pointers via the factory method, it's fine to use auto. This is merely for demonstration purposes.
 
-    /*Defining how a button reacts on click*/
+    /*Defining how a button reacts on click and on hover*/
     button->onClick = [](sf::Mouse::Button mouseButton) { //There is also a onClickRelease method
         if (mouseButton != sf::Mouse::Button::Left) return;
         wow++;
         std::cout << std::to_string(wow) << " OMG IT WAS CLICKED\n";
         button->changeText("WOW\n" + std::to_string(wow));
+    };
+    button->onMouseMovement = [](sf::Vector2f mousePosition, sf::Vector2i mouseDelta) {
+        if (button->isMouseHovering())
+            button->setFillColor(sf::Color::Green);
+        else 
+            button->setFillColor(sf::Color::Yellow);
     };
     /*Then setting attributes*/
     button->changeText("WOW");
@@ -103,5 +109,5 @@ int main()
     /*Anything between this and the above comment can be commented out safely*/
 
 
-    WindowControl::beginWindowLoop("Demo", sf::State::Fullscreen, 30);
+    WindowControl::beginWindowLoop("Demo", sf::State::Windowed, 30);
 }

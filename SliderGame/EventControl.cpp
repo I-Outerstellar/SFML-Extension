@@ -29,6 +29,13 @@ EventListeners::onKeyReleased = [](const sf::Event::KeyReleased& keyReleased) {
     if (keyReleaseFunction != nullptr) keyReleaseFunction();
 };
 
+const std::function<void(const sf::Event::MouseMovedRaw& mouseMovement)>
+EventListeners::onMouseMovement = [](const sf::Event::MouseMovedRaw& mouseMovement) {
+    for (auto& b : SceneStorage::currentScene->getSceneButtons()) {
+        b->mouseMovementEvent(window.mapPixelToCoords(sf::Mouse::getPosition(window)), mouseMovement.delta);
+    }
+};
+
 #pragma warning (push)
 #pragma warning (disable : 4100)
 const std::function<void(const sf::Event::MouseButtonPressed& mouseClick)> 

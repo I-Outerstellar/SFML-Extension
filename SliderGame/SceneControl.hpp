@@ -12,9 +12,19 @@ namespace GameObjects {
 /// </summary>
 namespace SceneControl {
 	/// <summary>
+	/// Calls any current scene functions that are to run before the window draws
+	/// </summary>
+	void updateBeforeDraw();
+
+	/// <summary>
 	/// The repeatedly looped function to draw the scene
 	/// </summary>
 	void draw();
+
+	/// <summary>
+	/// Calls any current scene functions that are to run after the window draws
+	/// </summary>
+	void updateAterDraw();
 
 	/// <summary>
 	/// Returns the current scene being used in a modifiable state

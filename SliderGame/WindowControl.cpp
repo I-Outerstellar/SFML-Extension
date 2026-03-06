@@ -1,6 +1,7 @@
 #include "GameWindow.hpp"
 #include "WindowControl.hpp"
 #include "SceneControl.hpp"
+#include "GameScene.hpp"
 #include "EventControl.hpp"
 
 void WindowControl::beginWindowLoop(const std::string title, sf::State windowState, unsigned int fps) {
@@ -10,9 +11,13 @@ void WindowControl::beginWindowLoop(const std::string title, sf::State windowSta
     while (window.isOpen())
     {
         window.handleEvents(EventListeners::onKeyPressed, EventListeners::onKeyReleased,
-            EventListeners::onClick, EventListeners::onClickRelease, EventListeners::windowClosed);
+            EventListeners::onClick, EventListeners::onClickRelease, EventListeners::onMouseMovement,
+            EventListeners::windowClosed);
 
+        SceneControl::updateBeforeDraw();
         SceneControl::draw();
+        SceneControl::updateAterDraw();
+        
     }
 
 }

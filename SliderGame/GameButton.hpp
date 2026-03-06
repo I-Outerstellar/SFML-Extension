@@ -17,7 +17,11 @@ namespace GameObjects {
 		/// Determines if the button is pressed down or not.
 		/// </summary>
 		bool pressed = false;
-
+		
+		/// <summary>
+		/// Determines if the mouse is hovering over the button or not.
+		/// </summary>
+		bool mouseHovering = false;
 	public:
 		/*Variables*/
 
@@ -30,6 +34,11 @@ namespace GameObjects {
 		/// Definable method for on click and on click release
 		/// </summary>
 		std::function<void(sf::Mouse::Button)> onClick, onClickRelease;
+
+		/// <summary>
+		/// Definable method for the mouse moving. Useful to detect if the button is being hovered over.
+		/// </summary>
+		std::function<void(sf::Vector2f mousePosition, sf::Vector2i mouseDelta)> onMouseMovement;
 
 
 		/*Methods*/
@@ -52,10 +61,16 @@ namespace GameObjects {
 		}
 
 		/// <summary>
-		/// Returns if the button is pressed.
+		/// Returns if the button is pressed
 		/// </summary>
-		/// <returns></returns>
-		virtual bool isPressed() { return this->pressed; };
+		/// <returns>True if the button is pressed, false if not</returns>
+		virtual bool isPressed() { return this->pressed; }
+
+		/// <summary>
+		/// Returns if the mouse is hovering over the button
+		/// </summary>
+		/// <returns>True if the mouse is hovering over the button, false if not</returns>
+		virtual bool isMouseHovering() { return this->mouseHovering; }
 
 		/// <summary>
 		/// The method required to listen for a click
@@ -66,6 +81,11 @@ namespace GameObjects {
 		/// The method required to listen to a click release
 		/// </summary>
 		virtual void clickReleaseEvent(sf::Mouse::Button mouseButton) = 0;
+
+		/// <summary>
+		/// The method required to listen to mouse movement
+		/// </summary>
+		virtual void mouseMovementEvent(sf::Vector2f mousePosition, sf::Vector2i mouseDelta) = 0;
 
 		virtual ~GameButton() = default;
 	};

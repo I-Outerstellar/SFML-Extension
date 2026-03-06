@@ -32,5 +32,10 @@ namespace EventListeners {
     /// Lambda function for when the left, right, or middle mouse button is released.
     /// </summary>
     extern const std::function<void(const sf::Event::MouseButtonReleased& mouseClickRelease)> onClickRelease;
+
+    /// <summary>
+    /// Lambda function for when the mouse is moved.
+    /// </summary>
+    extern const std::function<void(const sf::Event::MouseMovedRaw& mouseMovement)> onMouseMovement;
 }
 

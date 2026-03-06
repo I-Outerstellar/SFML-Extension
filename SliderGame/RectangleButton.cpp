@@ -7,8 +7,7 @@ using namespace GameObjects;
 
 void RectangleButton::clickEvent(sf::Mouse::Button mouseButton) {
 	if (this->pressed || !this->active) return;
-	sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
-	if (!this->getGlobalBounds().contains(mousePos))
+	if (!this->mouseHovering)
 		return;
 	this->pressed = true;
 	if (onClick != nullptr)
@@ -20,6 +19,15 @@ void RectangleButton::clickReleaseEvent(sf::Mouse::Button mouseButton) {
 	this->pressed = false;
 	if (onClickRelease != nullptr)
 		onClickRelease(mouseButton);
+}
+
+void RectangleButton::mouseMovementEvent(sf::Vector2f mousePosition, sf::Vector2i mouseDelta) {
+	if (this->getGlobalBounds().contains(mousePosition))
+		mouseHovering = true;
+	else
+		mouseHovering = false;
+	if (this->onMouseMovement != nullptr)
+		this->onMouseMovement(mousePosition, mouseDelta);
 }
 
 void RectangleButton::draw() {
