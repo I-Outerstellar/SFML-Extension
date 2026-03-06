@@ -10,8 +10,6 @@
 
 using namespace GameObjects;
 
-int wow = 0;
-
 /*
     TODO:
     - Research how sprites/images are done in SFML
@@ -33,9 +31,14 @@ int main()
     SceneControl::switchScene(scene);
     std::function<void()> beforeDrawFunction1 = []() {
         if ((rand() % 1000) == 0)
-            std::cout << "1/1000 chance!" << '\n';
+            std::cout << "1/1000 chance on scene 1!" << '\n';
+        };
+    std::function<void()> afterDrawFunction1 = []() {
+        if ((rand() % 500) == 0)
+            std::cout << "1/500 chance on scene 2!" << '\n';
         };
     scene.addBeforeDrawFunction(beforeDrawFunction1);
+    scene2.addAfterDrawFunction(afterDrawFunction1);
     scene.keyPressFunctions[StateControl::scancodeToInt(sf::Keyboard::Scancode::E)] = []() {
         SceneControl::switchScene(scene2);
         };
@@ -57,6 +60,7 @@ int main()
     /*Defining how a button reacts on click and on hover*/
     button->onClick = [](sf::Mouse::Button mouseButton) { //There is also a onClickRelease method
         if (mouseButton != sf::Mouse::Button::Left) return;
+        static int wow = 0;
         wow++;
         std::cout << std::to_string(wow) << " OMG IT WAS CLICKED\n";
         button->changeText("WOW\n" + std::to_string(wow));
