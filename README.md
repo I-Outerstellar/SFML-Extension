@@ -22,6 +22,8 @@ That said, it has actually turned into a project that can support multiple types
 
 # Limitations
 
+- Does not have a built-in way to size shapes relative to the screen size
+
 - Cannot change the Z-Index of buttons and shapes
 
 - Buttons always draw over shapes
