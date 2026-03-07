@@ -9,6 +9,16 @@
 #include <string>
 
 namespace GameObjects {
+	class GameScene;
+}
+
+namespace SceneControl {
+	GameObjects::GameScene& sortElements(GameObjects::GameScene& scene);
+}
+
+namespace GameObjects {
+
+	//Forward declaration of classes and namespace
 
 	class GameButton;
 	class GameShape;
@@ -18,19 +28,24 @@ namespace GameObjects {
 	/// </summary>
 	class GameScene {
 	private:
-		/// <summary>
-		/// Helper method that moves the pushed-to-back button forward in its vector.
-		/// </summary>
-		const void moveBackButton();
 
-		/// <summary>
-		/// Helper method that moves the pushed-to-back shape forward in its vector.
-		/// </summary>
-		const void moveBackShape();
 		std::vector<std::shared_ptr<GameButton>> sceneButtons{};
 		std::vector<std::shared_ptr<GameShape>> sceneShapes{};
 		std::vector<std::function<void()>*> beforeDraw{}, afterDraw{};
 		std::unordered_map<std::string, std::any> properties;
+
+	protected:
+		/// <summary>
+		/// Helper method that sorts the scene buttons vector.
+		/// </summary>
+		void sortShapes();
+
+		/// <summary>
+		/// Helper method that sorts the scene shapes vector.
+		/// </summary>
+		void sortButtons();
+
+		friend GameObjects::GameScene& SceneControl::sortElements(GameObjects::GameScene& scene);
 
 	public:
 		/// <summary>

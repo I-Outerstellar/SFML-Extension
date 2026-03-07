@@ -61,6 +61,9 @@
     <Filter Include="Header Files\GameObjects\BaseClasses">
       <UniqueIdentifier>{3c89b597-5dbb-4d74-9b5f-809b0b5a09e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\GameObjects\BaseClasses">
+      <UniqueIdentifier>{df0bc6d2-ae00-4ed6-a74c-a39384a63ba4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StateData.cpp">
@@ -107,6 +110,12 @@
     </ClCompile>
     <ClCompile Include="WindowControl.cpp">
       <Filter>Source Files\GameSystem\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="GameButton.cpp">
+      <Filter>Source Files\GameObjects\BaseClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="GameShape.cpp">
+      <Filter>Source Files\GameObjects\BaseClasses</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

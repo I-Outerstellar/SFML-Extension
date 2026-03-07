@@ -14,7 +14,7 @@ That said, it has actually turned into a project that can support multiple types
 
 - Scenes to switch between
 
-- Z-Index of buttons and shapes
+- Z-Index of buttons and shapes that can be changed mid-execution
 
 - Supports inheritence of game shapes and buttons
 
@@ -24,13 +24,13 @@ That said, it has actually turned into a project that can support multiple types
 
 - Does not have a built-in way to size shapes relative to the screen size
 
-- Cannot change the Z-Index of buttons and shapes
-
 - Buttons always draw over shapes
+
+- Z-Indexes of shapes and buttons cannot be different between multiple scenes
 
 - Cannot make a derived class from GameScene. Please use its properties map instead to achieve similar behaviour.
 
-- Works alongside SFML methods (this project was not made to reinvent the wheel)
+- Works alongside SFML methods rather than using new, original ones (this project was not made to reinvent the wheel)
 
 
 

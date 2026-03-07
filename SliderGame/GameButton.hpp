@@ -87,6 +87,13 @@ namespace GameObjects {
 		/// </summary>
 		virtual void mouseMovementEvent(sf::Vector2f mousePosition, sf::Vector2i mouseDelta) = 0;
 
+		/// <summary>
+		/// Sets the Z-Index of the button.
+		/// </summary>
+		/// <param name="zIndex"></param>
+		/// <returns></returns>
+		GameButton& setZIndex(unsigned int zIndex);
+
 		virtual ~GameButton() = default;
 	};
 

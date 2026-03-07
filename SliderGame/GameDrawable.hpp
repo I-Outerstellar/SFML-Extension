@@ -28,6 +28,8 @@ namespace GameObjects {
 		/// <returns></returns>
 		unsigned int getZIndex() const { return this->zIndex; }
 
+		//Set Z-Index methods are in every direct descendant of this class
+
 		/// <summary>
 		/// Draws the game object.
 		/// </summary>

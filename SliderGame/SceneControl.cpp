@@ -9,6 +9,10 @@ void SceneControl::updateBeforeDraw() {
     for (std::function<void()>* func : SceneStorage::currentScene->getBeforeDrawFunctions()) {
         if (func != nullptr && *func != nullptr) (*func)();
     }
+    if (currentScene().hasProperty("ResortElements")) {
+        currentScene().deleteProperty("ResortElements");
+        sortElements(currentScene());
+    }
 }
 
 void SceneControl::draw() {
@@ -45,7 +49,14 @@ void SceneControl::switchScene(GameObjects::GameScene& scene) {
     if (scene.switchedTo != nullptr) {
         scene2Pass = scene.switchedTo(beforeScene);
     }
-    if (scene1Pass && scene2Pass)
+    if (scene1Pass && scene2Pass) {
         SceneStorage::currentScene = &scene;
-    
+        sortElements(currentScene());
+    }
+}
+
+GameObjects::GameScene& SceneControl::sortElements(GameObjects::GameScene& scene) {
+    scene.sortButtons();
+    scene.sortShapes();
+    return scene;
 }

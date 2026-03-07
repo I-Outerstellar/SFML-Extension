@@ -39,6 +39,13 @@ namespace GameObjects {
 		/// <returns></returns>
 		virtual bool intersects(sf::Shape& shape) = 0;
 
+		/// <summary>
+		/// Sets the Z-Index of the shape.
+		/// </summary>
+		/// <param name="zIndex"></param>
+		/// <returns></returns>
+		GameShape& setZIndex(unsigned int zIndex);
+
 		virtual ~GameShape() = default;
 	};
 

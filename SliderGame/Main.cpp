@@ -16,9 +16,6 @@ using namespace GameObjects;
         Sprites are an entirely different SF entity, sf::Sprite.
         It's not something that can be overlaid on a rectangle or circle.
         So I must create a new GameShape and GameButton for sprites. Yay!
-
-    - Make the GameScene before and after draw std::function pointers into shared pointers, if possible
-        This is so it is consistent with the rest of the code
  */
 
 int main()

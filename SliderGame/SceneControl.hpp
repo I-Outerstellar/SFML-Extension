@@ -37,4 +37,10 @@ namespace SceneControl {
 	/// </summary>
 	/// <param name="gameScene"></param>
 	void switchScene(GameObjects::GameScene& gameScene);
+
+	/// <summary>
+	/// Sorts the given scene's shapes and elements.
+	/// </summary>
+	/// <param name="scene"></param>
+	GameObjects::GameScene& sortElements(GameObjects::GameScene& scene);
 }

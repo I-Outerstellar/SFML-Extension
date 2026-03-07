@@ -131,6 +131,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GameButton.cpp" />
+    <ClCompile Include="GameShape.cpp" />
     <ClCompile Include="SceneControl.cpp" />
     <ClCompile Include="EventControl.cpp" />
     <ClCompile Include="RectangleButton.cpp" />

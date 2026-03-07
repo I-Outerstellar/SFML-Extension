@@ -14,18 +14,18 @@ GameScene::GameScene() {
 	};
 }
 
-const void GameScene::moveBackButton() {
-	for (size_t i = this->sceneButtons.size() - 1; i >= 1; i--) {
-		if (this->sceneButtons.at(i - 1)->getZIndex() < this->sceneButtons.at(i)->getZIndex())
-			std::swap(this->sceneButtons.at(i - 1), this->sceneButtons.at(i));
-	}
+void GameScene::sortButtons() {
+	std::stable_sort(this->sceneButtons.begin(), this->sceneButtons.end(),
+		[](const std::shared_ptr<GameButton>& element1, const std::shared_ptr<GameButton>& element2) {
+			return element1->getZIndex() > element2->getZIndex();
+		});
 }
 
-const void GameScene::moveBackShape() {
-	for (size_t i = this->sceneShapes.size() - 1; i >= 1; i--) {
-		if (this->sceneShapes.at(i - 1)->getZIndex() < this->sceneShapes.at(i)->getZIndex())
-			std::swap(this->sceneShapes.at(i - 1), this->sceneShapes.at(i));
-	}
+void GameScene::sortShapes() {
+	std::stable_sort(this->sceneShapes.begin(), this->sceneShapes.end(),
+		[](const std::shared_ptr<GameShape>& element1, const std::shared_ptr<GameShape>& element2) {
+			return element1->getZIndex() > element2->getZIndex();
+		});
 }
 
 std::vector<std::shared_ptr<GameButton>> GameScene::getSceneButtons() {
@@ -48,10 +48,7 @@ GameScene& GameScene::add(const std::shared_ptr<GameButton>& button) {
 	if (this->contains(button)) return *this;
 	this->sceneButtons.push_back(button);
 
-	for (size_t i = this->sceneButtons.size() - 1; i >= 1; i--) {
-		if (this->sceneButtons.at(i - 1)->getZIndex() < this->sceneButtons.at(i)->getZIndex())
-			std::swap(this->sceneButtons.at(i - 1), this->sceneButtons.at(i));
-	}
+	this->sortButtons();
 	return *this;
 }
 
@@ -59,10 +56,7 @@ GameScene& GameScene::add(const std::shared_ptr<GameShape>& shape) {
 	if (this->contains(shape)) return *this;
 	this->sceneShapes.push_back(shape);
 
-	for (size_t i = this->sceneShapes.size() - 1; i >= 1; i--) {
-		if (this->sceneShapes.at(i - 1)->getZIndex() < this->sceneShapes.at(i)->getZIndex())
-			std::swap(this->sceneShapes.at(i - 1), this->sceneShapes.at(i));
-	}
+	this->sortShapes();
 	return *this;
 }
 
