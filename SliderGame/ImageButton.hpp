@@ -1,26 +1,19 @@
 #pragma once
-#include "SFML/Graphics/RectangleShape.hpp"
-#include "TextImplement.hpp"
+#include <SFML/Graphics/Sprite.hpp>
 #include "GameButton.hpp"
 
 namespace GameObjects {
 
-	/// <summary>
-	/// A class that represents a textbox button in the game.
-	/// </summary>
-	class TextButton : public sf::RectangleShape, public TextImplement, public GameButton {
+	class ImageButton : public sf::Sprite, public GameButton {
 	protected:
 		/// <summary>
 		/// Required constructor for the factory method.
 		/// </summary>
-		/// <param name="text"></param>
+		/// <param name="texture"></param>
 		/// <param name="zIndex"></param>
-		/// <param name="characterSize"></param>
-		TextButton(sf::Text text, unsigned int zIndex = 0, unsigned int characterSize = 30) :
-			TextImplement(text), sf::RectangleShape(), GameButton(zIndex)
-		{
-			text.setCharacterSize(characterSize);
-		}
+		ImageButton(sf::Texture& texture, unsigned int zIndex = 0) :
+			sf::Sprite(texture), GameButton(zIndex) {}
+
 	public:
 
 		/// <summary>
@@ -39,17 +32,11 @@ namespace GameObjects {
 		virtual void mouseMovementEvent(sf::Vector2f mousePosition, sf::Vector2i mouseDelta) override;
 
 		/// <summary>
-		/// Change the text of the button.
-		/// </summary>
-		/// <param name="text"></param>
-		virtual void changeText(std::string text) override;
-
-		/// <summary>
 		/// Draws the button.
 		/// </summary>
 		virtual void draw() override;
 
-		virtual ~TextButton() = default;
+		virtual ~ImageButton() = default;
 	};
 
 }

@@ -9,7 +9,11 @@ namespace GameObjects {
 	/// </summary>
 	class GamePolygon : public GameShape, public sf::ConvexShape {
 	protected:
-		GamePolygon(unsigned int zIndex = 0) { this->zIndex = zIndex; };
+		/// <summary>
+		/// Required constructor for the factory method
+		/// </summary>
+		/// <param name="zIndex"></param>
+		GamePolygon(unsigned int zIndex = 0) : GameShape(zIndex) {}
 	public:
 
 		/// <summary>

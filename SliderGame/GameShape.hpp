@@ -10,7 +10,8 @@ namespace GameObjects {
 	/// Interface for creating a game shape.
 	/// </summary>
 	class GameShape : public GameDrawable {
-	private:
+	protected:
+		using GameDrawable::GameDrawable;
 
 	public:
 

@@ -19,6 +19,8 @@ namespace GameObjects {
 		/// </summary>
 		bool visible = true;
 
+		GameDrawable(unsigned int zIndex) { this->zIndex = zIndex; }
+
 
 		/*Methods*/
 

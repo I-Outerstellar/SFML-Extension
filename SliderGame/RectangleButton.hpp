@@ -18,7 +18,7 @@ namespace GameObjects {
 		/// Required constructor for the factory method.
 		/// </summary>
 		/// <param name="zIndex"></param>
-		RectangleButton(unsigned int zIndex = 0) { this->zIndex = zIndex; }
+		RectangleButton(unsigned int zIndex = 0) : GameButton(zIndex) {}
 	public:
 
 		/// <summary>

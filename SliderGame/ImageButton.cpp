@@ -1,9 +1,9 @@
-#include "RectangleButton.hpp"
+#include "ImageButton.hpp"
 #include "GameWindow.hpp"
 
 using namespace GameObjects;
 
-void RectangleButton::clickEvent(sf::Mouse::Button mouseButton) {
+void ImageButton::clickEvent(sf::Mouse::Button mouseButton) {
 	if (this->pressed || !this->active) return;
 	if (!this->mouseHovering)
 		return;
@@ -12,14 +12,14 @@ void RectangleButton::clickEvent(sf::Mouse::Button mouseButton) {
 		onClick(mouseButton);
 }
 
-void RectangleButton::clickReleaseEvent(sf::Mouse::Button mouseButton) {
+void ImageButton::clickReleaseEvent(sf::Mouse::Button mouseButton) {
 	if (!this->pressed) return;
 	this->pressed = false;
 	if (onClickRelease != nullptr)
 		onClickRelease(mouseButton);
 }
 
-void RectangleButton::mouseMovementEvent(sf::Vector2f mousePosition, sf::Vector2i mouseDelta) {
+void ImageButton::mouseMovementEvent(sf::Vector2f mousePosition, sf::Vector2i mouseDelta) {
 	if (this->getGlobalBounds().contains(mousePosition))
 		mouseHovering = true;
 	else
@@ -28,6 +28,6 @@ void RectangleButton::mouseMovementEvent(sf::Vector2f mousePosition, sf::Vector2
 		this->onMouseMovement(mousePosition, mouseDelta);
 }
 
-void RectangleButton::draw() {
+void ImageButton::draw() {
 	window.draw(*this);
 }

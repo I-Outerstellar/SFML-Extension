@@ -1,19 +1,22 @@
 #pragma once
+#include <SFML/Graphics/Sprite.hpp>
 #include "GameShape.hpp"
-#include <memory>
 
 namespace GameObjects {
 
 	/// <summary>
-	/// Class that represents a rectangle in the game.
+	/// Class that represents an image in the game, with a rectangular form.
 	/// </summary>
-	class GameRectangle : public GameShape, public sf::RectangleShape {
+	class GameImage : public sf::Sprite, public GameShape {
 	protected:
 		/// <summary>
-		/// Required constructor for the factory method
+		/// Required constructor for the factory method.
 		/// </summary>
+		/// <param name="texture"></param>
 		/// <param name="zIndex"></param>
-		GameRectangle(unsigned int zIndex = 0) : GameShape(zIndex) {}
+		GameImage(sf::Texture& texture, unsigned int zIndex = 0) :
+			sf::Sprite(texture), GameShape(zIndex) {}
+
 	public:
 
 		/// <summary>
@@ -28,7 +31,7 @@ namespace GameObjects {
 		/// </summary>
 		virtual void draw() override;
 
-		virtual ~GameRectangle() = default;
+		virtual ~GameImage() = default;
 	};
 
 }

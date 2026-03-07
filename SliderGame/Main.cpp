@@ -10,14 +10,6 @@
 
 using namespace GameObjects;
 
-/*
-    TODO:
-    - Research how sprites/images are done in SFML
-        Sprites are an entirely different SF entity, sf::Sprite.
-        It's not something that can be overlaid on a rectangle or circle.
-        So I must create a new GameShape and GameButton for sprites. Yay!
- */
-
 int main()
 {
     std::srand(static_cast<unsigned int>(std::time(nullptr))); //Randomization setup
@@ -100,11 +92,23 @@ int main()
     polygon->setOutlineColor(sf::Color::White);
     polygon->setOutlineThickness(5);
 
+    /*Lastly, lets create an image button!*/
+    sf::Texture texture("Green Circle of Basic.png", false, sf::IntRect({0,0}, {250,250}));
+    std::shared_ptr<ImageButton> imageButton = GameButton::create<ImageButton>(texture, 1);
+    imageButton->setPosition({ 1000, 500 });
+    imageButton->onMouseMovement = [&imageButton](sf::Vector2f mousePosition, sf::Vector2i mouseDelta) {
+        if (imageButton->isMouseHovering())
+            imageButton->setTextureRect({ { 0, 125 }, { 250, 125 } });
+        else
+            imageButton->setTextureRect({ { 0, 0 }, { 250, 125 } });
+        };
+    //And it shall not do anything on click :)
+
 
     /*Anything between this and the below comment can be commented out safely*/
 
     scene.add(button).add(rect).add(circle).add(polygon);
-    scene2.add(button);
+    scene2.add(button).add(imageButton);
     //scene.remove(circle); 
 
     /*Anything between this and the above comment can be commented out safely*/

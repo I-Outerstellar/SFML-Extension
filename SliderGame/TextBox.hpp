@@ -8,6 +8,12 @@ namespace GameObjects {
 	/// </summary>
 	class TextBox : public GameRectangle {
 	protected:
+		/// <summary>
+		/// Required constructor for the factory method.
+		/// </summary>
+		/// <param name="text"></param>
+		/// <param name="characterSize"></param>
+		/// <param name="zIndex"></param>
 		TextBox(sf::Text text, unsigned int characterSize = 30, unsigned int zIndex = 0) :
 			text(text), GameRectangle(zIndex)
 		{

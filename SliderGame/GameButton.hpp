@@ -22,6 +22,8 @@ namespace GameObjects {
 		/// Determines if the mouse is hovering over the button or not.
 		/// </summary>
 		bool mouseHovering = false;
+
+		using GameDrawable::GameDrawable;
 	public:
 		/*Variables*/
 

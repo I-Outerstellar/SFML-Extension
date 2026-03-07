@@ -1,7 +1,5 @@
 #include "GameRectangle.hpp"
 #include "GameWindow.hpp"
-#include "GameScene.hpp"
-#include "SceneData.hpp"
 
 using namespace GameObjects;
 

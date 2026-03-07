@@ -18,14 +18,16 @@ void SceneControl::updateBeforeDraw() {
 void SceneControl::draw() {
 
     window.clear(SceneStorage::currentScene->backgroundColour);
-    for (auto& s : SceneStorage::currentScene->getSceneButtons()) {
+
+    for (auto& s : SceneStorage::currentScene->getSceneShapes()) {
         if (s->visible)
             s->draw();
     }
-    for (auto& b : SceneStorage::currentScene->getSceneShapes()) {
+    for (auto& b : SceneStorage::currentScene->getSceneButtons()) {
         if (b->visible)
             b->draw();
     }
+
     window.display();
 
 }

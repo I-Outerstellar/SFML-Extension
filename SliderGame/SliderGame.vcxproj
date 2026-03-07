@@ -132,7 +132,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GameButton.cpp" />
+    <ClCompile Include="GameImage.cpp" />
     <ClCompile Include="GameShape.cpp" />
+    <ClCompile Include="ImageButton.cpp" />
     <ClCompile Include="SceneControl.cpp" />
     <ClCompile Include="EventControl.cpp" />
     <ClCompile Include="RectangleButton.cpp" />
@@ -156,6 +158,8 @@
     <ClInclude Include="GamePolygon.hpp" />
     <ClInclude Include="GameScene.hpp" />
     <ClInclude Include="GameShape.hpp" />
+    <ClInclude Include="GameImage.hpp" />
+    <ClInclude Include="ImageButton.hpp" />
     <ClInclude Include="RectangleButton.hpp" />
     <ClInclude Include="SceneData.hpp" />
     <ClInclude Include="GameButton.hpp" />
@@ -170,6 +174,9 @@
     <ClInclude Include="TextButton.hpp" />
     <ClInclude Include="TextImplement.hpp" />
     <ClInclude Include="WindowControl.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Green Circle of Basic.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

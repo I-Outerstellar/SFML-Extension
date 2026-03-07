@@ -1,6 +1,4 @@
 #include "TextButton.hpp"
-#include "GameScene.hpp"
-#include "SceneData.hpp"
 #include "GameWindow.hpp"
 
 using namespace GameObjects;

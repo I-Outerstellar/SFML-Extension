@@ -1,12 +1,12 @@
-#include "GameCircle.hpp"
+#include "GameImage.hpp"
 #include "GameWindow.hpp"
 
 using namespace GameObjects;
 
-bool GameCircle::intersects(sf::Shape& shape) {
+bool GameImage::intersects(sf::Shape& shape) {
 	return this->getGlobalBounds().findIntersection(shape.getGlobalBounds()).has_value();
 }
 
-void GameCircle::draw() {
+void GameImage::draw() {
 	window.draw(*this);
 }

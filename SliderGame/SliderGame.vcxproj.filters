@@ -117,6 +117,12 @@
     <ClCompile Include="GameShape.cpp">
       <Filter>Source Files\GameObjects\BaseClasses</Filter>
     </ClCompile>
+    <ClCompile Include="GameImage.cpp">
+      <Filter>Source Files\GameObjects\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageButton.cpp">
+      <Filter>Source Files\GameObjects\Buttons</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameDrawable.hpp">
@@ -179,5 +185,16 @@
     <ClInclude Include="WindowControl.hpp">
       <Filter>Header Files\GameSystem\Control</Filter>
     </ClInclude>
+    <ClInclude Include="GameImage.hpp">
+      <Filter>Header Files\GameObjects\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageButton.hpp">
+      <Filter>Header Files\GameObjects\Buttons</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Green Circle of Basic.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
