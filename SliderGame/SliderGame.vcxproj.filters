@@ -40,63 +40,87 @@
     <Filter Include="IncludeThese">
       <UniqueIdentifier>{73f8a008-efef-45e7-ab35-ba672ffd3bdb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Cpp\GameControllers">
+      <UniqueIdentifier>{f54c1db5-ccb4-47a3-b761-217e4f3ba051}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Cpp\GameObjects">
+      <UniqueIdentifier>{8d633a31-9f9e-4dfc-b904-971ac5243045}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Cpp\GameControllers\Data">
+      <UniqueIdentifier>{218bab9d-f861-4309-aa2e-b2abbefac649}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Cpp\GameControllers\Control">
+      <UniqueIdentifier>{cd76e7ed-c128-4dbc-ada6-06094f0d751a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Cpp\GameObjects\BaseClasses">
+      <UniqueIdentifier>{d16998e6-3f0c-4a28-8162-5e8fc7a792d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Cpp\GameObjects\Shapes">
+      <UniqueIdentifier>{a58b6297-7b38-494e-8bd7-459de104404d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Cpp\GameObjects\Buttons">
+      <UniqueIdentifier>{73e36276-bcc5-4f62-9820-6f701d23c7ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Cpp\GameObjects\Scene">
+      <UniqueIdentifier>{7514588c-6ff0-455a-be95-cc9b0b333f00}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="src\cpp\EventControl.cpp">
-      <Filter>Src\Cpp</Filter>
+      <Filter>Src\Cpp\GameControllers\Control</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp\GameButton.cpp">
-      <Filter>Src\Cpp</Filter>
-    </ClCompile>
-    <ClCompile Include="src\cpp\GameCircle.cpp">
-      <Filter>Src\Cpp</Filter>
+      <Filter>Src\Cpp\GameObjects\BaseClasses</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp\GameImage.cpp">
-      <Filter>Src\Cpp</Filter>
+      <Filter>Src\Cpp\GameObjects\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cpp\GameCircle.cpp">
+      <Filter>Src\Cpp\GameObjects\Shapes</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp\GamePolygon.cpp">
-      <Filter>Src\Cpp</Filter>
+      <Filter>Src\Cpp\GameObjects\Shapes</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp\GameRectangle.cpp">
-      <Filter>Src\Cpp</Filter>
+      <Filter>Src\Cpp\GameObjects\Shapes</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp\GameScene.cpp">
-      <Filter>Src\Cpp</Filter>
+      <Filter>Src\Cpp\GameObjects\Scene</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp\GameShape.cpp">
-      <Filter>Src\Cpp</Filter>
+      <Filter>Src\Cpp\GameObjects\BaseClasses</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp\GameWindow.cpp">
-      <Filter>Src\Cpp</Filter>
+      <Filter>Src\Cpp\GameControllers\Data</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp\ImageButton.cpp">
-      <Filter>Src\Cpp</Filter>
+      <Filter>Src\Cpp\GameObjects\Buttons</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp\RectangleButton.cpp">
-      <Filter>Src\Cpp</Filter>
+      <Filter>Src\Cpp\GameObjects\Buttons</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp\SceneControl.cpp">
-      <Filter>Src\Cpp</Filter>
+      <Filter>Src\Cpp\GameControllers\Control</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp\SceneData.cpp">
-      <Filter>Src\Cpp</Filter>
+      <Filter>Src\Cpp\GameControllers\Data</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp\StateControl.cpp">
-      <Filter>Src\Cpp</Filter>
+      <Filter>Src\Cpp\GameControllers\Control</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp\StateData.cpp">
-      <Filter>Src\Cpp</Filter>
+      <Filter>Src\Cpp\GameControllers\Data</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp\TextBox.cpp">
-      <Filter>Src\Cpp</Filter>
+      <Filter>Src\Cpp\GameObjects\Shapes</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp\TextButton.cpp">
-      <Filter>Src\Cpp</Filter>
+      <Filter>Src\Cpp\GameObjects\Buttons</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp\WindowControl.cpp">
-      <Filter>Src\Cpp</Filter>
+      <Filter>Src\Cpp\GameControllers\Control</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\GameControllers.hpp">
