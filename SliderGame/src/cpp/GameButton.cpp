@@ -1,6 +1,6 @@
-#include "GameButton.hpp"
-#include "GameScene.hpp"
-#include "SceneControl.hpp"
+#include "../headers/GameButton.hpp"
+#include "../headers/GameScene.hpp"
+#include "../headers/SceneControl.hpp"
 
 GameObjects::GameButton& GameObjects::GameButton::setZIndex(unsigned int zIndex) {
 	this->zIndex = zIndex;

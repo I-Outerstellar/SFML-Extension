@@ -1,5 +1,5 @@
-#include "GameCircle.hpp"
-#include "GameWindow.hpp"
+#include "../headers/GameCircle.hpp"
+#include "../headers/GameWindow.hpp"
 
 using namespace GameObjects;
 

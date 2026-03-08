@@ -131,52 +131,52 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GameButton.cpp" />
-    <ClCompile Include="GameImage.cpp" />
-    <ClCompile Include="GameShape.cpp" />
-    <ClCompile Include="ImageButton.cpp" />
-    <ClCompile Include="SceneControl.cpp" />
-    <ClCompile Include="EventControl.cpp" />
-    <ClCompile Include="RectangleButton.cpp" />
-    <ClCompile Include="GameCircle.cpp" />
-    <ClCompile Include="GamePolygon.cpp" />
-    <ClCompile Include="GameScene.cpp" />
-    <ClCompile Include="SceneData.cpp" />
-    <ClCompile Include="GameRectangle.cpp" />
-    <ClCompile Include="StateData.cpp" />
-    <ClCompile Include="StateControl.cpp" />
-    <ClCompile Include="GameWindow.cpp" />
+    <ClCompile Include="src\cpp\EventControl.cpp" />
+    <ClCompile Include="src\cpp\GameButton.cpp" />
+    <ClCompile Include="src\cpp\GameCircle.cpp" />
+    <ClCompile Include="src\cpp\GameImage.cpp" />
+    <ClCompile Include="src\cpp\GamePolygon.cpp" />
+    <ClCompile Include="src\cpp\GameRectangle.cpp" />
+    <ClCompile Include="src\cpp\GameScene.cpp" />
+    <ClCompile Include="src\cpp\GameShape.cpp" />
+    <ClCompile Include="src\cpp\GameWindow.cpp" />
+    <ClCompile Include="src\cpp\ImageButton.cpp" />
+    <ClCompile Include="src\cpp\RectangleButton.cpp" />
+    <ClCompile Include="src\cpp\SceneControl.cpp" />
+    <ClCompile Include="src\cpp\SceneData.cpp" />
+    <ClCompile Include="src\cpp\StateControl.cpp" />
+    <ClCompile Include="src\cpp\StateData.cpp" />
+    <ClCompile Include="src\cpp\TextBox.cpp" />
+    <ClCompile Include="src\cpp\TextButton.cpp" />
+    <ClCompile Include="src\cpp\WindowControl.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="TextBox.cpp" />
-    <ClCompile Include="TextButton.cpp" />
-    <ClCompile Include="WindowControl.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameCircle.hpp" />
-    <ClInclude Include="GameControllers.hpp" />
-    <ClInclude Include="GameObjects.hpp" />
-    <ClInclude Include="GamePolygon.hpp" />
-    <ClInclude Include="GameScene.hpp" />
-    <ClInclude Include="GameShape.hpp" />
-    <ClInclude Include="GameImage.hpp" />
-    <ClInclude Include="ImageButton.hpp" />
-    <ClInclude Include="RectangleButton.hpp" />
-    <ClInclude Include="SceneData.hpp" />
-    <ClInclude Include="GameButton.hpp" />
-    <ClInclude Include="SceneControl.hpp" />
-    <ClInclude Include="GameDrawable.hpp" />
-    <ClInclude Include="GameRectangle.hpp" />
-    <ClInclude Include="StateData.hpp" />
-    <ClInclude Include="StateControl.hpp" />
-    <ClInclude Include="GameWindow.hpp" />
-    <ClInclude Include="EventControl.hpp" />
-    <ClInclude Include="TextBox.hpp" />
-    <ClInclude Include="TextButton.hpp" />
-    <ClInclude Include="TextImplement.hpp" />
-    <ClInclude Include="WindowControl.hpp" />
+    <ClInclude Include="include\GameControllers.hpp" />
+    <ClInclude Include="include\GameObjects.hpp" />
+    <ClInclude Include="src\headers\EventControl.hpp" />
+    <ClInclude Include="src\headers\GameButton.hpp" />
+    <ClInclude Include="src\headers\GameCircle.hpp" />
+    <ClInclude Include="src\headers\GameDrawable.hpp" />
+    <ClInclude Include="src\headers\GameImage.hpp" />
+    <ClInclude Include="src\headers\GamePolygon.hpp" />
+    <ClInclude Include="src\headers\GameRectangle.hpp" />
+    <ClInclude Include="src\headers\GameScene.hpp" />
+    <ClInclude Include="src\headers\GameShape.hpp" />
+    <ClInclude Include="src\headers\GameWindow.hpp" />
+    <ClInclude Include="src\headers\ImageButton.hpp" />
+    <ClInclude Include="src\headers\RectangleButton.hpp" />
+    <ClInclude Include="src\headers\SceneControl.hpp" />
+    <ClInclude Include="src\headers\SceneData.hpp" />
+    <ClInclude Include="src\headers\StateControl.hpp" />
+    <ClInclude Include="src\headers\StateData.hpp" />
+    <ClInclude Include="src\headers\TextBox.hpp" />
+    <ClInclude Include="src\headers\TextButton.hpp" />
+    <ClInclude Include="src\headers\TextImplement.hpp" />
+    <ClInclude Include="src\headers\WindowControl.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Green Circle of Basic.png" />
+    <Image Include="assets\Green Circle of Basic.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

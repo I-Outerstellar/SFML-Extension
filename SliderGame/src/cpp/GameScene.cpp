@@ -1,9 +1,9 @@
-#include "GameScene.hpp"
-#include "GameButton.hpp"
-#include "GameShape.hpp"
-#include "SceneData.hpp"
-#include "GameWindow.hpp"
-#include "StateControl.hpp"
+#include "../headers/GameScene.hpp"
+#include "../headers/GameButton.hpp"
+#include "../headers/GameShape.hpp"
+#include "../headers/SceneData.hpp"
+#include "../headers/GameWindow.hpp"
+#include "../headers/StateControl.hpp"
 #include <algorithm>
 
 using namespace GameObjects;

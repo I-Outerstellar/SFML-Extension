@@ -1,5 +1,5 @@
-#include "TextBox.hpp"
-#include "GameWindow.hpp"
+#include "../headers/TextBox.hpp"
+#include "../headers/GameWindow.hpp"
 
 using namespace GameObjects;
 

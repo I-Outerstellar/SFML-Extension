@@ -1,5 +1,5 @@
-#include "RectangleButton.hpp"
-#include "GameWindow.hpp"
+#include "../headers/RectangleButton.hpp"
+#include "../headers/GameWindow.hpp"
 
 using namespace GameObjects;
 

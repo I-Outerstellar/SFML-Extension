@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
-#include "GameWindow.hpp"
-#include "GameControllers.hpp"
-#include "GameObjects.hpp"
+#include "src/headers/WindowControl.hpp"
+#include "include/GameControllers.hpp"
+#include "include/GameObjects.hpp"
 #include <iostream>
 
 /*
@@ -93,7 +93,7 @@ int main()
     polygon->setOutlineThickness(5);
 
     /*Lastly, lets create an image button!*/
-    sf::Texture texture("Green Circle of Basic.png", false, sf::IntRect({0,0}, {250,250}));
+    sf::Texture texture("assets\\Green Circle of Basic.png", false, sf::IntRect({0,0}, {250,250}));
     std::shared_ptr<ImageButton> imageButton = GameButton::create<ImageButton>(texture, 1);
     imageButton->setPosition({ 1000, 500 });
     imageButton->onMouseMovement = [&imageButton](sf::Vector2f mousePosition, sf::Vector2i mouseDelta) {

@@ -5,6 +5,6 @@
 */
 
 //#include "EventControl.hpp" //Currently no functions that support the user.
-#include "StateControl.hpp"
-#include "SceneControl.hpp"
-#include "WindowControl.hpp"
+#include "../src/headers/StateControl.hpp"
+#include "../src/headers/SceneControl.hpp"
+#include "../src/headers/WindowControl.hpp"

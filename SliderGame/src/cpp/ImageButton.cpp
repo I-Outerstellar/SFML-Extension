@@ -1,5 +1,5 @@
-#include "ImageButton.hpp"
-#include "GameWindow.hpp"
+#include "../headers/ImageButton.hpp"
+#include "../headers/GameWindow.hpp"
 
 using namespace GameObjects;
 

@@ -1,9 +1,9 @@
-#include "EventControl.hpp"
-#include "GameButton.hpp"
-#include "GameScene.hpp"
-#include "SceneData.hpp"
-#include "GameWindow.hpp"
-#include "StateControl.hpp"
+#include "../headers/EventControl.hpp"
+#include "../headers/GameButton.hpp"
+#include "../headers/GameScene.hpp"
+#include "../headers/SceneData.hpp"
+#include "../headers/GameWindow.hpp"
+#include "../headers/StateControl.hpp"
 
 const std::function<void(const sf::Event::Closed& event)> EventListeners::windowClosed = [](const sf::Event::Closed& event) {
     window.close();

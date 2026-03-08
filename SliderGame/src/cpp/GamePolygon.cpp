@@ -1,5 +1,5 @@
-#include "GamePolygon.hpp"
-#include "GameWindow.hpp"
+#include "../headers/GamePolygon.hpp"
+#include "../headers/GameWindow.hpp"
 
 using namespace GameObjects;
 

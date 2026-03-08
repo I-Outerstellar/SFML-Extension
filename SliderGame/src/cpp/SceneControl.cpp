@@ -1,9 +1,9 @@
-#include "SceneControl.hpp"
-#include "GameButton.hpp"
-#include "GameShape.hpp"
-#include "GameScene.hpp"
-#include "SceneData.hpp"
-#include "GameWindow.hpp"
+#include "../headers/SceneControl.hpp"
+#include "../headers/GameButton.hpp"
+#include "../headers/GameShape.hpp"
+#include "../headers/GameScene.hpp"
+#include "../headers/SceneData.hpp"
+#include "../headers/GameWindow.hpp"
 
 void SceneControl::updateBeforeDraw() {
     for (std::function<void()>* func : SceneStorage::currentScene->getBeforeDrawFunctions()) {

@@ -1,5 +1,5 @@
-#include "StateControl.hpp"
-#include "StateData.hpp"
+#include "../headers/StateControl.hpp"
+#include "../headers/StateData.hpp"
 #include <thread>
 #include <chrono>
 #include <atomic>

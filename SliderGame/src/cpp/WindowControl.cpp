@@ -1,8 +1,8 @@
-#include "GameWindow.hpp"
-#include "WindowControl.hpp"
-#include "SceneControl.hpp"
-#include "GameScene.hpp"
-#include "EventControl.hpp"
+#include "../headers/GameWindow.hpp"
+#include "../headers/WindowControl.hpp"
+#include "../headers/SceneControl.hpp"
+#include "../headers/GameScene.hpp"
+#include "../headers/EventControl.hpp"
 
 void WindowControl::beginWindowLoop(const std::string title, sf::State windowState, unsigned int fps) {
     window.create(sf::VideoMode::getDesktopMode(), title, windowState);

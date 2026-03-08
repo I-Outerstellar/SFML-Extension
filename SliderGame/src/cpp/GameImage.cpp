@@ -1,5 +1,5 @@
-#include "GameImage.hpp"
-#include "GameWindow.hpp"
+#include "../headers/GameImage.hpp"
+#include "../headers/GameWindow.hpp"
 
 using namespace GameObjects;
 
