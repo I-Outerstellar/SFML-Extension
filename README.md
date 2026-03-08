@@ -28,16 +28,7 @@ That said, it has actually turned into a project that can support multiple types
 
 - Z-Indexes of shapes and buttons cannot be different between multiple scenes
 
-- Cannot make a derived class from GameScene. Please use its properties map instead to achieve similar behaviour.
+- Cannot make a derived class from GameScene, unless you are only changing a method's behaviour instead of adding a new attribute/method. Please use its properties map instead to achieve similar behaviour.
 
 - Works alongside SFML methods rather than using new, original ones (this project was not made to reinvent the wheel)
 
-
-
-# Future Plans
-
-- Support of sprites and sprite buttons
-
-- Putting all the .hpp and .cpp files into folders
-
-- Any necessary cleanup
