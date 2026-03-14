@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{0182752e-8e48-4b17-8e61-33e1a2442b76}</ProjectGuid>
-    <RootNamespace>SliderGame</RootNamespace>
+    <ProjectGuid>{8508bfa6-c3ee-4e57-88f9-778b05140841}</ProjectGuid>
+    <RootNamespace>SFML_Extension</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Slider Game</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -132,9 +131,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Board.cpp" />
-    <ClCompile Include="SlidingTilesData.cpp" />
-    <ClCompile Include="SlidingTilesFunctions.cpp" />
     <ClCompile Include="src\cpp\EventControl.cpp" />
     <ClCompile Include="src\cpp\GameButton.cpp" />
     <ClCompile Include="src\cpp\GameCircle.cpp" />
@@ -156,12 +152,8 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Board.hpp" />
     <ClInclude Include="include\GameControllers.hpp" />
     <ClInclude Include="include\GameObjects.hpp" />
-    <ClInclude Include="SlidingTilesData.hpp" />
-    <ClInclude Include="SlidingTilesEnums.hpp" />
-    <ClInclude Include="SlidingTilesFunctions.hpp" />
     <ClInclude Include="src\headers\EventControl.hpp" />
     <ClInclude Include="src\headers\GameButton.hpp" />
     <ClInclude Include="src\headers\GameCircle.hpp" />

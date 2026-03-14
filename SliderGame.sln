@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36930.0 d17.14
+VisualStudioVersion = 17.14.36930.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SliderGame", "SliderGame\SliderGame.vcxproj", "{0182752E-8E48-4B17-8E61-33E1A2442B76}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Slider Game", "SliderGame\SliderGame.vcxproj", "{0182752E-8E48-4B17-8E61-33E1A2442B76}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SFML-Extension", "SFML-Extension\SFML-Extension.vcxproj", "{8508BFA6-C3EE-4E57-88F9-778B05140841}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTests", "UnitTests\UnitTests.vcxproj", "{50E4480E-316F-C5F6-131B-DDDC92AB14F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,22 @@ Global
 		{0182752E-8E48-4B17-8E61-33E1A2442B76}.Release|x64.Build.0 = Release|x64
 		{0182752E-8E48-4B17-8E61-33E1A2442B76}.Release|x86.ActiveCfg = Release|Win32
 		{0182752E-8E48-4B17-8E61-33E1A2442B76}.Release|x86.Build.0 = Release|Win32
+		{8508BFA6-C3EE-4E57-88F9-778B05140841}.Debug|x64.ActiveCfg = Debug|x64
+		{8508BFA6-C3EE-4E57-88F9-778B05140841}.Debug|x64.Build.0 = Debug|x64
+		{8508BFA6-C3EE-4E57-88F9-778B05140841}.Debug|x86.ActiveCfg = Debug|Win32
+		{8508BFA6-C3EE-4E57-88F9-778B05140841}.Debug|x86.Build.0 = Debug|Win32
+		{8508BFA6-C3EE-4E57-88F9-778B05140841}.Release|x64.ActiveCfg = Release|x64
+		{8508BFA6-C3EE-4E57-88F9-778B05140841}.Release|x64.Build.0 = Release|x64
+		{8508BFA6-C3EE-4E57-88F9-778B05140841}.Release|x86.ActiveCfg = Release|Win32
+		{8508BFA6-C3EE-4E57-88F9-778B05140841}.Release|x86.Build.0 = Release|Win32
+		{50E4480E-316F-C5F6-131B-DDDC92AB14F8}.Debug|x64.ActiveCfg = Debug|x64
+		{50E4480E-316F-C5F6-131B-DDDC92AB14F8}.Debug|x64.Build.0 = Debug|x64
+		{50E4480E-316F-C5F6-131B-DDDC92AB14F8}.Debug|x86.ActiveCfg = Debug|Win32
+		{50E4480E-316F-C5F6-131B-DDDC92AB14F8}.Debug|x86.Build.0 = Debug|Win32
+		{50E4480E-316F-C5F6-131B-DDDC92AB14F8}.Release|x64.ActiveCfg = Release|x64
+		{50E4480E-316F-C5F6-131B-DDDC92AB14F8}.Release|x64.Build.0 = Release|x64
+		{50E4480E-316F-C5F6-131B-DDDC92AB14F8}.Release|x86.ActiveCfg = Release|Win32
+		{50E4480E-316F-C5F6-131B-DDDC92AB14F8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
